@@ -10,7 +10,6 @@ general:
 dependencies:
   override:
     - npm install npm@latest -g
-    - npm install -g angular-cli@1.0.0-beta.20-1
     - npm install
 
 test:
