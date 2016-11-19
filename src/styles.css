@@ -1,2 +1,293 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* All - Utilities */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.ml-5 {
+    margin-left:5px;
+}
+
+.ml-10 {
+    margin-left:10px;
+}
+
+.ml-15 {
+    margin-left:15px;
+}
+
+.ml-20 {
+    margin-left:20px;
+}
+
+.ml-40 {
+    margin-left:40px;
+}
+
+
+
+.mr-5 {
+    margin-right:5px;
+}
+
+.mr-10 {
+    margin-right:10px;
+}
+
+.mr-15 {
+    margin-right:15px;
+}
+
+.mr-20 {
+    margin-right:20px;
+}
+
+.mr-40 {
+    margin-right:40px;
+}
+
+
+.mt-5 {
+    margin-top:5px;
+}
+
+.mt-10 {
+    margin-top:10px;
+}
+
+.mt-15 {
+    margin-top:15px;
+}
+
+.mt-20 {
+    margin-top:20px;
+}
+
+.mt-40 {
+    margin-top:40px;
+}
+
+.mb-5 {
+    margin-bottom:5px;
+}
+
+.mb-10 {
+    margin-bottom:10px;
+}
+
+.mb-15 {
+    margin-bottom:15px;
+}
+
+.mb-20 {
+    margin-bottom:20px;
+}
+
+.mb-40 {
+    margin-bottom:40px;
+}
+
+.block.standard {
+    padding-bottom: 120px;
+    background: #fff;
+    -webkit-backface-visibility: hidden;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* All - Spinner */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.glyphicon.fast-right-spinner {
+    -webkit-animation: glyphicon-spin-r 1s infinite linear;
+    animation: glyphicon-spin-r 1s infinite linear;
+}
+
+.glyphicon.normal-right-spinner {
+    -webkit-animation: glyphicon-spin-r 2s infinite linear;
+    animation: glyphicon-spin-r 2s infinite linear;
+}
+
+.glyphicon.slow-right-spinner {
+    -webkit-animation: glyphicon-spin-r 3s infinite linear;
+    animation: glyphicon-spin-r 3s infinite linear;
+}
+
+@-webkit-keyframes glyphicon-spin-r {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes glyphicon-spin-r {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Auth Connect/Callback - Modal */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.modal {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Dashboard - Pull Request Panel */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.glyphicon { margin-right:5px;}
+.section-box h2 { margin-top:0px;}
+.section-box h2 a { font-size:15px; }
+.glyphicon-heart { color:#e74c3c;}
+.glyphicon-comment { color:#27ae60;}
+.separator { padding-right:5px;padding-left:5px; }
+.section-box hr {margin-top: 0;margin-bottom: 5px;border: 0;border-top: 1px solid rgb(199, 199, 199);}
+
+.pull-request-panel {
+    margin-bottom: 20px;
+    border-top: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+    border-right: 1px #ddd solid;
+    border-left: 1px #ddd solid;
+}
+.pull-request-panel.panel-horizontal {
+    display:table;
+    width:100%;
+}
+.pull-request-panel.panel-horizontal > .panel-heading, .pull-request-panel.panel-horizontal > .panel-body, .pull-request-panel.panel-horizontal > .panel-footer,  .pull-request-panel.panel-horizontal > .panel-empty {
+    display:table-cell;
+}
+.pull-request-panel.panel-horizontal > .panel-heading, .pull-request-panel.panel-horizontal > .panel-footer {
+    width: 25%;
+    border:0;
+    vertical-align: middle;
+}
+
+.pull-request-panel.panel-horizontal > .panel-empty {
+    background-color: #f5f5f5;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+    padding: 20px 15px;
+
+}
+
+.pull-request-panel.panel-horizontal > .panel-heading {
+    border-right: 1px solid #ddd;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+
+}
+.pull-request-panel.panel-horizontal > .panel-footer {
+    border-left: 1px solid #ddd;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0px;
+}
+
+.pull-request-panel.panel-horizontal .pr-date, .pull-request-panel.panel-horizontal .pr-user {
+    font-size: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pull-request-panel.panel-horizontal .pr-number {
+    margin-top: 10px!important;
+    margin-bottom: 10px!important;
+}
+
+.pull-request-panel.panel-horizontal .pr-number a:hover {
+    color: #fbc011;
+}
+
+.pull-request-panel.panel-horizontal .pr-user a:hover {
+    color: #fbc011;
+}
+
+pre.pr-body {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-break: keep-all;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    padding: 10px;
+    max-height: 300px;
+}
+
+.pull-request-panel .panel-body .button * {
+    color: white;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Dashboard - Projects Panel */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.categories-wrapper .entry a {
+    color: #888;
+    cursor: pointer;
+}
+
+.categories-wrapper .entry a:hover {
+    color: #fbc011;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Project Deploy - Form */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 768px) {
+    .project-deploy-form.form-horizontal .control-label {
+        padding-top: 10px;
+    }
+
+    .project-deploy-form.form-horizontal input[type="text"], .project-deploy-form.form-horizontal input[type="email"], .project-deploy-form.form-horizontal select, textarea {
+        margin:0px;
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+
+.project-deploy-form.form-horizontal select#versionIncr {
+    background: #f8f8f8;
+    height: 43px;
+    color: #777777;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px transparent solid;
+    border-radius: 0px;
+}

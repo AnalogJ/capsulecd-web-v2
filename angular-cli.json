@@ -12,14 +12,15 @@
         "favicon.ico",
         "index.html"
       ],
-      "index": "angular.html",
+      "index": "index.html",
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/css/style.css"
       ],
       "scripts": [],
       "environments": {

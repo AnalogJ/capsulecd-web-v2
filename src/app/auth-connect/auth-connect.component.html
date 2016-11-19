@@ -1,3 +1,31 @@
-<p>
-  auth-connect works!
-</p>
+<!-- Large modal -->
+
+<div bsModal #childModal="bs-modal" [config]="{backdrop: 'static'}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" style="border-radius:0px;">
+
+      <div class="modal-body" style="padding: 80px">
+        <div class="page-tagline">
+          <h2 class="title">Sign Into CapsuleCD</h2>
+          <div class="description">
+            If you have already authorized either GitHub or Bitbucket on your CapsuleCD account, then you can click either button to sign in.
+          </div>
+        </div>
+
+        <div style="text-align: center; ">
+          <a class="button size-2" (click)="loginWith('github')">
+            <span>Github</span>
+            <span *ngIf="loading.github" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+          </a>
+          <a class="button size-2" (click)="loginWith('bitbucket')">
+            <span>Bitbucket</span>
+            <span *ngIf="loading.bitbucket" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+          </a>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

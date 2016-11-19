@@ -1,3 +1,118 @@
-<p>
-  dashboard works!
-</p>
+<div class="blocks-container">
+
+  <div class="block scroll-to-block" data-id="benefits">
+    <div class="container">
+      <div class="row page-tagline" style="margin-bottom: 0px;">
+        <div class="col-md-6 col-md-offset-3 wow flipInX" data-wow-delay="0.3s">
+          <h2 class="title">Dashboard</h2>
+          <div class="description">Tonsequat in erat ut, congue bibendum nulla. Suspendisse id pharetra lacus, et hendrerit mi. Praesent at vestibulum tortor. Praesent condimentum efficitur massa pharetra dolor sed.</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3" style="margin-bottom: 50px;">
+
+          <div class="widget-entry">
+            <h3 class="widget-title">All Projects <span *ngIf="loading.projects" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+            </h3>
+            <div class="categories-wrapper">
+              <span *ngFor="let project of projects" class="entry">
+                <a (click)="showProject(project)" >
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>{{project.RepoId}}
+                  <span *ngIf="loading.pullrequests[project.RepoId]" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+                </a>
+                <span class="number" [routerLink]="['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/edit' ]"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></span>
+              </span>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-9">
+          <div class="typography-article">
+            <h4>{{selectedProject.Id}} Pull Requests
+              <span *ngIf="loading.pullrequests[selectedProject.RepoId]" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+            </h4>
+          </div>
+          <div class="clear"></div>
+
+          <div class="row" *ngFor="let pullRequest of projectPullRequests">
+
+            <div class="pull-request-panel panel-default panel-horizontal typography-article">
+              <div class="panel-heading text-center" style="width:10em;">
+                <h3 class="pr-number"><a [href]="pullRequest.html_url">#{{pullRequest.number}}</a></h3>
+                <span class="pr-date">8 Febrero 2016</span>
+                <hr />
+                <div class="pr-user"><a [href]="pullRequest.user.html_url">@{{pullRequest.user.login}}</a></div>
+              </div>
+
+              <div class="panel-body">
+
+                <!--div class="col-xs-2 col-md-3 text-center age">
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=40&txt=John%20Doe&w=200&h=200" class="img-circle img-responsive" alt="" />
+                </div-->
+                <div class="col-xs-12 col-md-12 section-box">
+                  <h4>{{pullRequest.title}}</h4>
+                  <pre class="pr-body">{{pullRequest.body || '...'}}</pre>
+
+                  <a class="button size-3 pull-right mt-15" [routerLink]="['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/pullrequests/' + pullRequest.number ]"><span>Create Release</span></a>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="row" *ngIf="projectPullRequests.length == 0">
+
+            <div class="pull-request-panel panel-default panel-horizontal typography-article">
+              <div class="panel-empty text-center" style="width:10em;">
+                <h3 class="pr-number"><a>No Pull Requests Found</a></h3>
+                <p>Try selecting a different project</p>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-bottom">
+      <div class="footer-linck">
+        <a href="#">Privacy Policy</a>
+        <a href="#">About Us </a>
+        <a href="#">Support</a>
+        <a href="#">FAQ</a>
+        <a href="#">Blog</a>
+        <a href="#">Forum</a>
+      </div>
+      <div class="media-icon">
+        <a href="#"><img src="img/theme-1/c-icon.png" alt=""/></a>
+        <a href="#"><img src="img/theme-1/c-icon1.png" alt=""/></a>
+        <a href="#"><img src="img/theme-1/c-icon2.png" alt=""/></a>
+        <a href="#"><img src="img/theme-1/c-icon3.png" alt=""/></a>
+      </div>
+      <div class="copy">
+        <span>© 2015 All rights reserved. O.MNI</span>
+      </div>
+    </div>
+    <div class="back-to-top"><i class="fa fa-chevron-up"></i></div>
+  </footer>
+
+
+</div>

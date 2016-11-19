@@ -1,3 +1,132 @@
-<p>
-  project-deploy works!
-</p>
+<div class="blocks-container">
+
+  <div class="block standard scroll-to-block" data-id="contact">
+    <div class="container">
+      <div class="row page-tagline">
+        <div class="col-md-6 col-md-offset-3">
+          <h2 class="title">Create Release</h2>
+          <div class="description">Praesent at vestibulum tortor. Praesent condimentum efficitur massa, nec congue sem dapibus sed. Sed eget justo at erat suscipit tristique sit.</div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 wow fadeInRight" data-wow-delay="0.3s">
+
+
+          <div class="typography-article">
+            <h4>Project Info
+              <span *ngIf="loading.pullRequest || loading.project" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+            </h4>
+            <form class="form-horizontal project-deploy-form mb-40">
+              <fieldset>
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="projectName">Project Name</label>
+                  <div class="col-md-9">
+                    <input disabled id="projectName" value="{{orgId + '/' + repoId}}" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="prNumber">PR Number</label>
+                  <div class="col-md-9">
+                    <input disabled id="prNumber" value="{{prNumber}}" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="prTitle">PR Title</label>
+                  <div class="col-md-9">
+                    <input disabled id="prTitle" value="{{pullRequest.title}}" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="projectType">Project Type</label>
+                  <div class="col-md-9">
+                    <input disabled id="projectType" value="{{projectData.packageType}}" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="dockerImage">Docker Image</label>
+                  <div class="col-md-9">
+                    <input disabled id="dockerImage" value="{{projectData.dockerImage}}" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+              </fieldset>
+            </form>
+
+          </div>
+
+
+          <div class="typography-article">
+            <h4>Release Settings</h4>
+            <form class="form-horizontal project-deploy-form mb-40" >
+              <fieldset>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="versionIncr">Version Increment</label>
+                  <div class="col-md-9">
+
+                    <select [(ngModel)]="versionIncr" id="versionIncr" name="versionIncr" class="form-control input-md">
+                      <option value="major">Major (1.x.x)</option>
+                      <option value="minor">Minor (x.1.x)</option>
+                      <option value="patch">Patch (x.x.1)</option>
+                    </select>
+
+                  </div>
+                </div>
+
+              </fieldset>
+            </form>
+          </div>
+
+          <div style="text-align: center;">
+
+            <a class="button size-2" (click)="createRelease()">
+              <span>Create Release from Pull Request</span>
+              <span *ngIf="loading.createRelease || loading.project" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+            </a>
+
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-bottom">
+      <div class="footer-linck">
+        <a href="#">Privacy Policy</a>
+        <a href="#">About Us </a>
+        <a href="#">Support</a>
+        <a href="#">FAQ</a>
+        <a href="#">Blog</a>
+        <a href="#">Forum</a>
+      </div>
+      <div class="media-icon">
+        <a href="#"><img src="img/theme-1/c-icon.png" alt=""/></a>
+        <a href="#"><img src="img/theme-1/c-icon1.png" alt=""/></a>
+        <a href="#"><img src="img/theme-1/c-icon2.png" alt=""/></a>
+        <a href="#"><img src="img/theme-1/c-icon3.png" alt=""/></a>
+      </div>
+      <div class="copy">
+        <span>© 2015 All rights reserved. O.MNI</span>
+      </div>
+    </div>
+    <div class="back-to-top"><i class="fa fa-chevron-up"></i></div>
+  </footer>
+
+
+</div>

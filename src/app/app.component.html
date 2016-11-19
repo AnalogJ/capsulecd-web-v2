@@ -1,3 +1,24 @@
-<h1>
-  {{title}}
-</h1>
+<!-- HEADER -->
+<header>
+    <a href="index.html" id="logo"><img src="img/theme-1/logo.png" alt=""/><img class="act" src="img/theme-1/logo-act.png" alt=""/></a>
+    <div class="mob-icon">
+        <span></span>
+    </div>
+    <nav>
+        <ul>
+            <li><a routerLink="/dashboard" routerLinkActive="act" class="scroll-to-link">Dashboard</a></li>
+            <li><a routerLink="/project/create" routerLinkActive="act" class="scroll-to-link">Add Project</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div id="content-wrapper">
+
+    <p>Angular 2 is running...</p>
+    <!-- Routed views go here -->
+    <router-outlet></router-outlet>
+
+</div>
+
+
