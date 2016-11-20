@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
+import { FooterComponent } from './partials/footer/footer.component';
 import { RouterModule }   from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProjectCreateComponent } from './project-create/project-create.component';
@@ -26,6 +27,7 @@ import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 @NgModule({
   declarations: [
     AppComponent,
+    FooterComponent,
     DashboardComponent,
     ProjectCreateComponent,
     ProjectEditComponent,

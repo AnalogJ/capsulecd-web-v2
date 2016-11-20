@@ -298,3 +298,10 @@ pre.pr-body {
     border: 1px transparent solid;
     border-radius: 0px;
 }
+
+.project-form.form-horizontal .button.type-1 * {
+    color: #fbc011;
+}
+.project-form.form-horizontal .button.type-1:hover *{
+    color: #fff;
+}

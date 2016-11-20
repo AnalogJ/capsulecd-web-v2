@@ -27,5 +27,8 @@ export class CacheService {
     )
     return currentSubject;
   }
+  delete(cacheKey:string){
+    delete this._cache[cacheKey]
+  }
 
 }
