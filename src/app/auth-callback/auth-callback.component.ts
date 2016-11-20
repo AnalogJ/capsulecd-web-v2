@@ -3,6 +3,7 @@ import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 import { ModalDirective } from 'ng2-bootstrap/ng2-bootstrap';
 import { CookieService } from 'angular2-cookie/core';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-auth-callback',
@@ -14,7 +15,7 @@ export class AuthCallbackComponent implements AfterViewInit {
 
   successfulCallback = true
 
-  constructor(private apiService: ApiService, private cookieService:CookieService, private activatedRoute: ActivatedRoute) { }
+  constructor(private apiService: ApiService, private router: Router, private cookieService:CookieService, private activatedRoute: ActivatedRoute) { }
 
   ngAfterViewInit() {
     this.childModal.show()
@@ -30,6 +31,7 @@ export class AuthCallbackComponent implements AfterViewInit {
               console.log(data)
               localStorage.setItem('id_token', data.token) //set the JWT token
               this.cookieService.put('CAPSULECD_SERVICE_TYPE',data.service_type)
+              this.router.navigate(['/dashboard'])
             },
             error => console.log(error)
         );

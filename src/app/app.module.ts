@@ -17,6 +17,7 @@ import { ApiService } from './api.service'
 import { AuthGuard } from './auth-guard.service'
 import {  provideAuth } from 'angular2-jwt';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
+import {MomentModule} from 'angular2-moment';
 
 
 
@@ -35,6 +36,7 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
     FormsModule,
     HttpModule,
     Ng2BootstrapModule,
+    MomentModule,
     RouterModule.forRoot([
       { path: 'login', component: AuthConnectComponent },
       { path: 'auth/connect', component: AuthConnectComponent },

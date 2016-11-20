@@ -1,3 +1,164 @@
-<p>
-  project-edit works!
-</p>
+<div class="blocks-container">
+
+  <div class="block standard scroll-to-block" data-id="contact">
+    <div class="container">
+      <div class="row page-tagline">
+        <div class="col-md-6 col-md-offset-3">
+          <h2 class="title">Edit {{orgId + '/' + repoId}}</h2>
+          <div class="description">Praesent at vestibulum tortor. Praesent condimentum efficitur massa, nec congue sem dapibus sed. Sed eget justo at erat suscipit tristique sit.</div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 wow fadeInRight" data-wow-delay="0.3s">
+
+
+          <div class="typography-article">
+            <h4>Project Settings
+              <span *ngIf="loading.project" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+            </h4>
+            <form class="form-horizontal project-form mb-40">
+              <fieldset>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="packageType">Package Type</label>
+                  <div class="col-md-9">
+
+                    <select [(ngModel)]="projectData.packageType" (ngModelChange)="packageTypeChanged($event)" id="packageType" name="packageType" class="form-control input-md">
+                      <option *ngFor="let key of defaultSettingsKeys" value="{{key}}">{{defaultSettings[key].display}}</option>
+                    </select>
+                    <p class="help-block small">Which type of package are you deploying using CapsuleCD?</p>
+
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="versionIncr">Version Increment</label>
+                  <div class="col-md-9">
+
+                    <select [(ngModel)]="projectData.versionIncr" id="versionIncr" name="versionIncr" class="form-control input-md">
+                      <option value="major">Major (1.x.x)</option>
+                      <option value="minor">Minor (x.1.x)</option>
+                      <option value="patch">Patch (x.x.1)</option>
+                    </select>
+                    <p class="help-block small">Select which segment of the SemVer version you would like to bump with each release. This can be overriden when creating a new release</p>
+
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="dockerImage">Docker Image</label>
+                  <div class="col-md-9">
+                    <input [(ngModel)]="projectData.dockerImage" id="dockerImage" value="{{projectData.dockerImage}}" name="textinput" type="text" class="form-control input-md" required="">
+                    <p class="help-block small">Select the docker image you would like to use when deploying your package. The default image should work in most cases</p>
+
+                  </div>
+                </div>
+
+                <div class="col-md-9 col-md-offset-3">
+                  <a class="button type-1 size-3" (click)="saveSettings()">
+                    <span>Save Settings</span>
+                    <span *ngIf="loading.saveSettings" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+                  </a>
+                </div>
+              </fieldset>
+            </form>
+
+          </div>
+
+
+          <div class="typography-article">
+            <h4>Project Secrets
+              <span *ngIf="loading.project" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+            </h4>
+            <p>Add environment variables to the project build. You can add sensitive data (e.g. NPM, RubyGems API keys) here, rather than placing them in the repository.
+            </p>
+            <form class="form-horizontal project-form mb-40" >
+              <fieldset>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="secretName">Secret Name</label>
+                  <div class="col-md-9">
+                    <input [(ngModel)]="secretName"  id="secretName" name="textinput" type="text" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="secretValue">Secret Value</label>
+                  <div class="col-md-9">
+                    <input [(ngModel)]="secretValue" id="secretValue" name="textinput" type="password" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+                <div class="col-md-9 col-md-offset-3">
+                  <a class="button type-1 size-3" (click)="addSecret()">
+                    <span>Add Secret</span>
+                    <span *ngIf="loading.addSecret" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+                  </a>
+                </div>
+
+              </fieldset>
+            </form>
+
+          </div>
+
+
+
+
+        </div>
+
+
+
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="typography-article">
+            <div class="table-responsive">
+              <table class="table">
+                <tr>
+                  <th>Secret Name</th>
+                  <th>Secret Value</th>
+                  <th></th>
+                </tr>
+                <tr *ngFor="let secretKey of projectSecretsKeys">
+                  <td>{{secretKey}}</td>
+                  <td>*****{{projectSecrets[secretKey].last4}}</td>
+                  <td><span aria-hidden="true" class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-bottom">
+      <div class="footer-linck">
+        <a href="#">Privacy Policy</a>
+        <a href="#">About Us </a>
+        <a href="#">Support</a>
+        <a href="#">FAQ</a>
+        <a href="#">Blog</a>
+        <a href="#">Forum</a>
+      </div>
+      <div class="media-icon">
+        <a href="#"><img src="img/theme-1/c-icon.png" alt=""/></a>
+        <a href="#"><img src="img/theme-1/c-icon1.png" alt=""/></a>
+        <a href="#"><img src="img/theme-1/c-icon2.png" alt=""/></a>
+        <a href="#"><img src="img/theme-1/c-icon3.png" alt=""/></a>
+      </div>
+      <div class="copy">
+        <span>© 2015 All rights reserved. O.MNI</span>
+      </div>
+    </div>
+    <div class="back-to-top"><i class="fa fa-chevron-up"></i></div>
+  </footer>
+
+
+</div>

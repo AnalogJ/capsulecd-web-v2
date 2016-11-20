@@ -195,7 +195,7 @@ ul li:after{position: absolute; left: 0px; top: 12px; background: #fbc011; width
 .swiper-active-switch{background: #fbc011; height:23px;}
 /*form styles*/
 form{position: relative; float: left; width: 100%;}
-input[type="text"], input[type="email"], select, textarea{background:#f8f8f8; border: 0px; height: 43px; line-height: 43px; padding: 0px 15px; color: #777777; font-size: 14px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 45%; margin: 14px 2%; border: 1px transparent solid;}
+input[type="text"],input[type="password"], input[type="email"], select, textarea{background:#f8f8f8; border: 0px; height: 43px; line-height: 43px; padding: 0px 15px; color: #777777; font-size: 14px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 45%; margin: 14px 2%; border: 1px transparent solid;}
 textarea{width: 94%; height: 125px;}
 ::-webkit-input-placeholder {color:#777777;}
 :-moz-placeholder {color:#777777; opacity: 1;}

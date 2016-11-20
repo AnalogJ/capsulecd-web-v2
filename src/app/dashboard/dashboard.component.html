@@ -41,7 +41,7 @@
             <div class="pull-request-panel panel-default panel-horizontal typography-article">
               <div class="panel-heading text-center" style="width:10em;">
                 <h3 class="pr-number"><a [href]="pullRequest.html_url">#{{pullRequest.number}}</a></h3>
-                <span class="pr-date">8 Febrero 2016</span>
+                <span class="pr-date">{{pullRequest.updated_at | amTimeAgo}}</span>
                 <hr />
                 <div class="pr-user"><a [href]="pullRequest.user.html_url">@{{pullRequest.user.login}}</a></div>
               </div>
@@ -70,7 +70,7 @@
 
             <div class="pull-request-panel panel-default panel-horizontal typography-article">
               <div class="panel-empty text-center" style="width:10em;">
-                <h3 class="pr-number"><a>No Pull Requests Found</a></h3>
+                <h3 class="pr-number"><div>No Pull Requests Found</div></h3>
                 <p>Try selecting a different project</p>
               </div>
 

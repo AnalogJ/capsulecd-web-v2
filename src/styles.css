@@ -268,21 +268,21 @@ pre.pr-body {
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
-/* Project Deploy - Form */
+/* Project (Deploy/Edit) - Form */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 @media (min-width: 768px) {
-    .project-deploy-form.form-horizontal .control-label {
+    .project-form.form-horizontal .control-label {
         padding-top: 10px;
     }
 
-    .project-deploy-form.form-horizontal input[type="text"], .project-deploy-form.form-horizontal input[type="email"], .project-deploy-form.form-horizontal select, textarea {
+    .project-form.form-horizontal input[type="password"], .project-form.form-horizontal input[type="text"], .project-form.form-horizontal input[type="email"], .project-form.form-horizontal select, textarea {
         margin:0px;
         width: 100%;
         border-radius: 0px;
     }
 }
 
-.project-deploy-form.form-horizontal select#versionIncr {
+.project-form.form-horizontal select {
     background: #f8f8f8;
     height: 43px;
     color: #777777;

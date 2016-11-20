@@ -34,6 +34,9 @@ export class ApiService {
   loggedIn() {
     return tokenNotExpired();
   }
+  serviceType(){
+    return this.cookieService.get('CAPSULECD_SERVICE_TYPE')
+  }
 
   authConnect(serviceType): Observable<any> {
     return this.http.get(`${AppSettings.API_ENDPOINT}/connect/${serviceType}`)
@@ -66,6 +69,39 @@ export class ApiService {
 
   getProject(orgId:string, repoId:string): Observable<any> {
     return this.authHttp.get(`${AppSettings.API_ENDPOINT}/project/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}`)
+        .map(this.extractData)
+        .catch(this.handleError);
+  }
+
+  createProject(orgId:string, repoId:string){
+    return this.authHttp.post(`${AppSettings.API_ENDPOINT}/project/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}`, {})
+        .map(this.extractData)
+        .catch(this.handleError);
+  }
+  editProject(orgId:string, repoId:string, payload: any): Observable<any> {
+    return this.authHttp.put(`${AppSettings.API_ENDPOINT}/project/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}`, payload)
+        .map(this.extractData)
+        .catch(this.handleError);
+  }
+
+  fetchOrgs(page?:number): Observable<any>{
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('page', (page || 0).toString())
+
+    return this.authHttp.get(`${AppSettings.API_ENDPOINT}/fetch/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/orgs`,{
+      search: params
+    })
+        .map(this.extractData)
+        .catch(this.handleError);
+  }
+
+  fetchOrgRepos(orgId:string, page?:number): Observable<any>{
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('page', (page || 0).toString())
+
+    return this.authHttp.get(`${AppSettings.API_ENDPOINT}/fetch/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/orgs/${orgId}/repos`,{
+      search: params
+    })
         .map(this.extractData)
         .catch(this.handleError);
   }
