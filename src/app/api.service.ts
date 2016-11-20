@@ -59,6 +59,20 @@ export class ApiService {
   }
 
 
+  fetchDockerImage(dockerImage): Observable<any>{
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('query', dockerImage)
+
+    return this.http.get(`//crossorigin.me/https://cloud.docker.com/v2/search/repositories/`, {
+      search: params
+    })
+        .map((res: Response) => {
+          let body = res.json();
+          return body.results || [];
+        })
+        .catch(this.handleError);
+  }
+
   // Authenticated functions
 
   getProjects(): Observable<any> {
@@ -80,6 +94,18 @@ export class ApiService {
   }
   editProject(orgId:string, repoId:string, payload: any): Observable<any> {
     return this.authHttp.put(`${AppSettings.API_ENDPOINT}/project/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}`, payload)
+        .map(this.extractData)
+        .catch(this.handleError);
+  }
+
+  deleteProject(orgId:string, repoId:string): Observable<any> {
+    return this.authHttp.delete(`${AppSettings.API_ENDPOINT}/process/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}`)
+        .map(this.extractData)
+        .catch(this.handleError);
+  }
+
+  deployProject(orgId:string, repoId:string, prNumber:number, settings?: any): Observable<any>{
+    return this.authHttp.post(`${AppSettings.API_ENDPOINT}/process/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}/${prNumber}`, settings || {})
         .map(this.extractData)
         .catch(this.handleError);
   }
@@ -120,12 +146,6 @@ export class ApiService {
   fetchOrgRepoPullRequest(orgId:string, repoId:string, prNumber:number): Observable<any>{
 
     return this.authHttp.get(`${AppSettings.API_ENDPOINT}/fetch/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/orgs/${orgId}/repos/${repoId}/pullrequests/${prNumber}`)
-        .map(this.extractData)
-        .catch(this.handleError);
-  }
-
-  deployProject(orgId:string, repoId:string, prNumber:number, settings?: any): Observable<any>{
-    return this.authHttp.post(`${AppSettings.API_ENDPOINT}/process/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}/${prNumber}`, settings || {})
         .map(this.extractData)
         .catch(this.handleError);
   }

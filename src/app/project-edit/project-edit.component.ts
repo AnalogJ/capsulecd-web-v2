@@ -2,6 +2,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { AppSettings } from '../app-settings'
+import { Observable }     from 'rxjs/Observable';
 
 @Component({
   selector: 'app-project-edit',
@@ -24,9 +25,11 @@ export class ProjectEditComponent implements OnInit {
   loading = {
     project: true,
     saveSettings: false,
-    addSecret: false
+    addSecret: false,
+    queryDockerImages: false
   }
-
+  dockerImagesDatasource:Observable<any>;
+  dockerImagesNoResults: boolean = false;
 
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
 
@@ -44,6 +47,11 @@ export class ProjectEditComponent implements OnInit {
             error => console.log(error),
             () => this.loading.project = false
         );
+
+    this.dockerImagesDatasource = Observable.create((observer:any) => {
+        // Runs on every search
+        observer.next(this.projectData.dockerImage);
+    }).mergeMap((token:string) => this.apiService.fetchDockerImage(token));
   }
 
   //TODO: add method to autocomplete docker image lookup
@@ -54,7 +62,12 @@ export class ProjectEditComponent implements OnInit {
     this.projectData.dockerImage = this.defaultSettings[this.projectData.packageType].image
   }
 
-
+    dockerImagesLoading(e:boolean){
+        this.loading.queryDockerImages = e;
+    }
+    dockerImagesNoResultsHandler(e:boolean):void {
+        this.dockerImagesNoResults = e;
+    }
 
   saveSettings(){
     var payload = {

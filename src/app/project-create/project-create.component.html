@@ -49,7 +49,7 @@
         <div class="col-md-8 col-md-offset-2">
           <div class="typography-article">
             <div class="table-responsive">
-              <table class="table">
+              <table class="table" infinite-scroll  (scrolled)="fetchSelectedOrgReposNextPage()" [infiniteScrollDisabled]="loading.fetchOrgRepos ||  orgReposAll">
                 <tr>
                   <th>Name</th>
                   <th>Updated At</th>

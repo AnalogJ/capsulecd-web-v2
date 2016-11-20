@@ -47,9 +47,29 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-md-3 control-label" for="dockerImage">Docker Image</label>
+                  <label class="col-md-3 control-label" for="dockerImage">Docker Image
+                  </label>
                   <div class="col-md-9">
-                    <input [(ngModel)]="projectData.dockerImage" id="dockerImage" value="{{projectData.dockerImage}}" name="textinput" type="text" class="form-control input-md" required="">
+                    <div class="input-group typeahead-group">
+
+                      <input [(ngModel)]="projectData.dockerImage"
+                             [typeahead]="dockerImagesDatasource"
+                             (typeaheadLoading)="dockerImagesLoading($event)"
+                             (typeaheadNoResults)="dockerImagesNoResultsHandler($event)"
+                             [typeaheadOptionsLimit]="7"
+                             [typeaheadOptionField]="'repo_name'"
+                             name="dockerImage"
+                             id="dockerImage"
+                             placeholder="Docker Image (eg. 'AnalogJ/capsulecd')"
+                             type="text"
+                             class="form-control input-md">
+                      <span *ngIf="loading.queryDockerImages" class="input-group-addon">
+                        <span class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>
+                      </span>
+                    </div>
+                    <div *ngIf="dockerImagesNoResults">
+                      <i class="glyphicon glyphicon-remove"></i> No Results Found
+                    </div>
                     <p class="help-block small">Select the docker image you would like to use when deploying your package. The default image should work in most cases</p>
 
                   </div>
