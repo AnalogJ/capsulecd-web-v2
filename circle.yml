@@ -10,7 +10,7 @@ general:
 dependencies:
   override:
     - npm install npm@latest -g
-    - npm install -g git+ssh://git@github.com/AnalogJ/angular-cli.git#AnalogJ-patch-1
+    - git clone -b AnalogJ-patch-1 git@github.com:AnalogJ/angular-cli.git && cd angular-cli && npm link
     - npm install --production
 
 test:
