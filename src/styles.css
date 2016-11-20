@@ -95,6 +95,29 @@
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
+/* All - Alert */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.alert{font-size: 14px; line-height: 24px; position: relative; margin-bottom: 30px;
+    border-radius:0px;
+}
+.alert .title {
+    font-size: 12px;
+    line-height: 16px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'bold';
+    position: relative;
+}
+.alert.alert-0{background: #fbc011; color: rgba(255, 255, 255, 0.8); box-shadow: 3px 4px 10px rgba(0,0,0,.1); padding: 30px;}
+.alert.alert-0:before{width: 5px; height: 100%; position: absolute; left: 0; top: 0; content: ""; background: #daa508;}
+.alert.alert-1{background: #222; color: #c9c9c9; box-shadow: 3px 4px 10px rgba(0,0,0,.1); padding: 30px;}
+.alert.alert-1:before{width: 5px; height: 100%; position: absolute; left: 0; top: 0; content: ""; background: #000;}
+.alert.alert-2{background: #fff; border: 5px #fbc011 solid; color: #fbc011; padding: 25px;}
+.alert .close{opacity: 90; position: absolute; top: 10px; right: 10px; font-size: 25px; width: 20px; line-height: 20px; text-align: center; cursor: pointer; font-family: 'bold';}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
 /* All - Spinner */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 

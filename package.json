@@ -20,7 +20,6 @@
     "@angular/platform-browser": "~2.1.0",
     "@angular/platform-browser-dynamic": "~2.1.0",
     "@angular/router": "~3.1.0",
-    "angular2-cookie": "^1.2.5",
     "angular2-infinite-scroll": "^0.2.6",
     "angular2-jwt": "^0.1.25",
     "angular2-moment": "^1.0.0-beta.rc.1",
@@ -33,7 +32,7 @@
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",
-    "angular-cli": "1.0.0-beta.20-4",
+    "angular-cli": "AnalogJ/angular-cli#AnalogJ-patch-1",
     "codelyzer": "1.0.0-beta.1",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",

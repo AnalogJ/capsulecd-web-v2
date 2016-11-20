@@ -8,11 +8,19 @@
           <div class="description">Praesent at vestibulum tortor. Praesent condimentum efficitur massa, nec congue sem dapibus sed. Sed eget justo at erat suscipit tristique sit.</div>
         </div>
       </div>
+
       <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <alert *ngFor="let alert of alerts;let i = index" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
+            <div class="title">{{ alert?.title}}</div>
+            {{ alert?.msg }}
+          </alert>
+        </div>
+      </div>
 
+
+      <div class="row">
         <div class="col-md-8 col-md-offset-2 wow fadeInRight" data-wow-delay="0.3s">
-
-
           <div class="typography-article">
             <h4>Project Settings
               <span *ngIf="loading.project" class="glyphicon glyphicon-repeat ml-10 fast-right-spinner"></span>

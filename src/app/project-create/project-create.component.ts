@@ -5,6 +5,7 @@ import { AppSettings } from '../app-settings'
 import {Organization} from "../models/organization";
 import {Repository} from "../models/repository";
 import {Router} from '@angular/router'
+import {Alert} from '../models/alert'
 
 @Component({
   selector: 'app-project-create',
@@ -22,8 +23,10 @@ export class ProjectCreateComponent implements OnInit {
     fetchOrgRepos: false,
     createProject: false
   }
+  alerts: Alert[] = [];
 
-  constructor(private apiService: ApiService, private router: Router) { }
+
+    constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit() {
     this.apiService.fetchOrgs()
@@ -34,10 +37,13 @@ export class ProjectCreateComponent implements OnInit {
               this.selectedOrgIndex = 0
               this.fetchSelectedOrgRepos()
             },
-            error => console.log(error),
+            error => this.alerts.push(new Alert('Error retrieving organizations', error.message)),
             () => this.loading.fetchOrgs = false
         );
 
+  }
+  closeAlert(i:number):void {
+    this.alerts.splice(i, 1);
   }
 
   resetPagination(){
@@ -56,7 +62,7 @@ export class ProjectCreateComponent implements OnInit {
               console.log(data)
               this.orgRepos = data;
             },
-            error => console.log(error),
+            error => this.alerts.push(new Alert('Error retrieving organization repositories', error.message)),
             () => this.loading.fetchOrgRepos = false
         );
   }
@@ -78,7 +84,7 @@ export class ProjectCreateComponent implements OnInit {
                 this.orgRepos = this.orgRepos.concat(data);
               }
             },
-            error => console.log(error),
+            error => this.alerts.push(new Alert('Error retrieving organization repositories', error.message)),
             () => this.loading.fetchOrgRepos = false
         );
 
@@ -109,7 +115,7 @@ export class ProjectCreateComponent implements OnInit {
                     this.router.navigate([`/project/${this.apiService.serviceType()}/${orgId}/${repoId}/edit`])
 
                 },
-                error => console.log(error),
+                error => this.alerts.push(new Alert('Error creating new project', error.message)),
                 () => this.loading.createProject = false
             );
     }

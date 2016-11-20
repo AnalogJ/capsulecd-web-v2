@@ -3,12 +3,11 @@ import { AuthHttp, tokenNotExpired } from 'angular2-jwt';
 import { Http, Response, Headers, RequestOptions, URLSearchParams} from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
 import {AppSettings} from '../app-settings';
-import { CookieService } from 'angular2-cookie/core';
 import { CacheService } from '../services/cache.service'
 @Injectable()
 export class ApiService {
 
-  constructor(public authHttp: AuthHttp, private http: Http, private cookieService: CookieService, private cacheService: CacheService) { }
+  constructor(public authHttp: AuthHttp, private http: Http, private cacheService: CacheService) { }
 
   //Helper functions
   private extractData(res: Response) {
@@ -37,8 +36,9 @@ export class ApiService {
   loggedIn() {
     return tokenNotExpired();
   }
-  serviceType(){
-    return this.cookieService.get('CAPSULECD_SERVICE_TYPE')
+  serviceType(): string{
+    return localStorage.getItem('service_type')
+
   }
 
   authConnect(serviceType): Observable<any> {
@@ -87,7 +87,7 @@ export class ApiService {
   }
 
   getProject(orgId:string, repoId:string): Observable<any> {
-    var url = `${AppSettings.API_ENDPOINT}/project/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}`
+    var url = `${AppSettings.API_ENDPOINT}/project/${this.serviceType()}/${orgId}/${repoId}`
     var cacheKey = this.cacheKey('GET', url);
     return this.cacheService.get(cacheKey) || this.cacheService.put(cacheKey, this.authHttp.get(url)
           .map(this.extractData)
@@ -95,24 +95,24 @@ export class ApiService {
   }
 
   createProject(orgId:string, repoId:string){
-    return this.authHttp.post(`${AppSettings.API_ENDPOINT}/project/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}`, {})
+    return this.authHttp.post(`${AppSettings.API_ENDPOINT}/project/${this.serviceType()}/${orgId}/${repoId}`, {})
         .map(this.extractData)
         .catch(this.handleError);
   }
   editProject(orgId:string, repoId:string, payload: any): Observable<any> {
-    return this.authHttp.put(`${AppSettings.API_ENDPOINT}/project/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}`, payload)
+    return this.authHttp.put(`${AppSettings.API_ENDPOINT}/project/${this.serviceType()}/${orgId}/${repoId}`, payload)
         .map(this.extractData)
         .catch(this.handleError);
   }
 
   deleteProject(orgId:string, repoId:string): Observable<any> {
-    return this.authHttp.delete(`${AppSettings.API_ENDPOINT}/process/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}`)
+    return this.authHttp.delete(`${AppSettings.API_ENDPOINT}/process/${this.serviceType()}/${orgId}/${repoId}`)
         .map(this.extractData)
         .catch(this.handleError);
   }
 
   deployProject(orgId:string, repoId:string, prNumber:number, settings?: any): Observable<any>{
-    return this.authHttp.post(`${AppSettings.API_ENDPOINT}/process/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/${orgId}/${repoId}/${prNumber}`, settings || {})
+    return this.authHttp.post(`${AppSettings.API_ENDPOINT}/process/${this.serviceType()}/${orgId}/${repoId}/${prNumber}`, settings || {})
         .map(this.extractData)
         .catch(this.handleError);
   }
@@ -120,7 +120,7 @@ export class ApiService {
   fetchOrgs(page?:number): Observable<any>{
     let params: URLSearchParams = new URLSearchParams();
     params.set('page', (page || 0).toString());
-    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/orgs`;
+    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.serviceType()}/orgs`;
 
     var cacheKey = this.cacheKey('GET', url, params);
     return this.cacheService.get(cacheKey) || this.cacheService.put(cacheKey, this.authHttp.get(url,{ search: params })
@@ -131,7 +131,7 @@ export class ApiService {
   fetchOrgRepos(orgId:string, page?:number): Observable<any>{
     let params: URLSearchParams = new URLSearchParams();
     params.set('page', (page || 0).toString())
-    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/orgs/${orgId}/repos`
+    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.serviceType()}/orgs/${orgId}/repos`
 
     var cacheKey = this.cacheKey('GET', url, params);
     return this.cacheService.get(cacheKey) || this.cacheService.put(cacheKey, this.authHttp.get(url,{ search: params })
@@ -143,7 +143,7 @@ export class ApiService {
   fetchOrgRepoPullRequests(orgId:string, repoId:string, page?:number): Observable<any>{
     let params: URLSearchParams = new URLSearchParams();
     params.set('page', (page || 0).toString())
-    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/orgs/${orgId}/repos/${repoId}/pullrequests`
+    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.serviceType()}/orgs/${orgId}/repos/${repoId}/pullrequests`
 
     var cacheKey = this.cacheKey('GET', url, params);
     return this.cacheService.get(cacheKey) || this.cacheService.put(cacheKey, this.authHttp.get(url,{ search: params })
@@ -152,7 +152,7 @@ export class ApiService {
   }
 
   fetchOrgRepoPullRequest(orgId:string, repoId:string, prNumber:number): Observable<any>{
-    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.cookieService.get('CAPSULECD_SERVICE_TYPE')}/orgs/${orgId}/repos/${repoId}/pullrequests/${prNumber}`
+    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.serviceType()}/orgs/${orgId}/repos/${repoId}/pullrequests/${prNumber}`
 
     var cacheKey = this.cacheKey('GET', url);
     return this.cacheService.get(cacheKey) || this.cacheService.put(cacheKey, this.authHttp.get(url)

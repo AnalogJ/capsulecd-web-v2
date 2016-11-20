@@ -8,6 +8,16 @@
           <div class="description">Tonsequat in erat ut, congue bibendum nulla. Suspendisse id pharetra lacus, et hendrerit mi. Praesent at vestibulum tortor. Praesent condimentum efficitur massa pharetra dolor sed.</div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <alert *ngFor="let alert of alerts;let i = index" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
+            <div class="title">{{ alert?.title}}</div>
+            {{ alert?.msg }}
+          </alert>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-3" style="margin-bottom: 50px;">
 

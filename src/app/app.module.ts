@@ -18,7 +18,6 @@ import { ApiService } from './services/api.service'
 import { CacheService } from './services/cache.service'
 import { AuthGuard } from './services/auth-guard.service'
 import { provideAuth } from 'angular2-jwt';
-import { CookieService } from 'angular2-cookie/services/cookies.service';
 import {MomentModule} from 'angular2-moment';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 
@@ -61,7 +60,6 @@ import { InfiniteScrollModule } from 'angular2-infinite-scroll';
   providers: [
     ApiService,
     CacheService,
-    CookieService,
     AuthGuard,
     provideAuth({
       globalHeaders: [{'Content-Type':'application/json'}]

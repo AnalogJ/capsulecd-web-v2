@@ -1,6 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
+import {Alert} from '../models/alert'
 
 
 @Component({
@@ -15,6 +16,7 @@ export class ProjectDeployComponent implements OnInit {
   projectData: any = {};
   projectSecrets: any = {};
   pullRequest: any = {};
+  alerts: Alert[] = [];
 
   loading = {
     project: true,
@@ -39,7 +41,7 @@ export class ProjectDeployComponent implements OnInit {
               this.versionIncr = this.projectData.versionIncr || this.versionIncr
 
             },
-            error => console.log(error),
+            error => this.alerts.push(new Alert('Error retrieving project', error.message)),
             () => this.loading.project = false
         );
 
@@ -49,11 +51,13 @@ export class ProjectDeployComponent implements OnInit {
               console.log(data)
               this.pullRequest = data
             },
-            error => console.log(error),
+            error => this.alerts.push(new Alert('Error retrieving pull request', error.message)),
             () => this.loading.pullRequest = false
         );
   }
-
+  closeAlert(i:number):void {
+    this.alerts.splice(i, 1);
+  }
   createRelease(){
     //TODO: this function should also send version increment & custom changelog.
     this.loading.createRelease = true;
@@ -63,7 +67,7 @@ export class ProjectDeployComponent implements OnInit {
               console.log(data)
               //todo change path.
             },
-            error => console.log(error),
+            error => this.alerts.push(new Alert('Error creating new release', error.message)),
             () => this.loading.createRelease = false
         );
   }

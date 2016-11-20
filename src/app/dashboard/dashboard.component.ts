@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../models/project'
 import { ApiService } from '../services/api.service';
+import {Alert} from '../models/alert'
 
 @Component({
   selector: 'app-dashboard',
@@ -15,7 +16,7 @@ export class DashboardComponent implements OnInit {
   projects: Project[] = [];
   selectedProject: Project = new Project();
   projectPullRequests = []
-
+  alerts: Alert[] = [];
 
   constructor(private apiService: ApiService) { }
 
@@ -27,7 +28,7 @@ export class DashboardComponent implements OnInit {
           this.selectedProject = this.projects[0]
           this.getProjectPullRequests()
         },
-        error => console.log(error),
+        error => this.alerts.push(new Alert('Error retrieving projects', error.message)),
         () => this.loading.projects = false
     )
   }
@@ -39,9 +40,12 @@ export class DashboardComponent implements OnInit {
             console.log(data);
             this.projectPullRequests = data;
         },
-        error => console.log(error),
+        error => this.alerts.push(new Alert('Error retrieving pull requests', error.message)),
         () => this.loading.pullrequests[this.selectedProject.RepoId] = false
     )
+  }
+  closeAlert(i:number):void {
+    this.alerts.splice(i, 1);
   }
 
   showProject(project:Project){

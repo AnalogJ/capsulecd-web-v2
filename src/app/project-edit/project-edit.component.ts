@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { AppSettings } from '../app-settings'
 import { Observable }     from 'rxjs/Observable';
+import {Alert} from '../models/alert'
 
 @Component({
   selector: 'app-project-edit',
@@ -22,6 +23,7 @@ export class ProjectEditComponent implements OnInit {
   secretName: string = '';
   secretValue: string = '';
 
+  alerts: Alert[] = [];
   loading = {
     project: true,
     saveSettings: false,
@@ -44,7 +46,7 @@ export class ProjectEditComponent implements OnInit {
               this.projectSecrets = data.Secrets || this.projectSecrets;
               this.projectSecretsKeys = Object.keys(this.projectSecrets)
             },
-            error => console.log(error),
+            error => this.alerts.push(new Alert('Error retrieving project', error.message)),
             () => this.loading.project = false
         );
 
@@ -57,6 +59,9 @@ export class ProjectEditComponent implements OnInit {
   //TODO: add method to autocomplete docker image lookup
   //TODO: add help text with common secrets for each image/package type
   //TODO: add delete method for secrets.
+  closeAlert(i:number):void {
+    this.alerts.splice(i, 1);
+  }
 
   packageTypeChanged = function(){
     this.projectData.dockerImage = this.defaultSettings[this.projectData.packageType].image
@@ -79,7 +84,7 @@ export class ProjectEditComponent implements OnInit {
             data => {
               console.log(data)
             },
-            error => console.log(error),
+            error => this.alerts.push(new Alert('Error updating project', error.message)),
             () =>  this.loading.saveSettings = false
         );
   }
@@ -98,7 +103,7 @@ export class ProjectEditComponent implements OnInit {
               this.secretName = '';
               this.secretValue = '';
             },
-            error => console.log(error),
+            error => this.alerts.push(new Alert('Error updating project secrets', error.message)),
             () =>  this.loading.addSecret = false
         );
   }
