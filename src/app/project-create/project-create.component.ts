@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { ApiService } from '../services/api.service';
 import { AppSettings } from '../app-settings'
 import {Organization} from "../models/organization";
 import {Repository} from "../models/repository";
