@@ -1632,9 +1632,14 @@ body.teaser .styled-form .field-wrapper input{background: rgba(255,255,255,0.1);
 .new-block .styled-form form{float: none;}
 .new-block .styled-form .form-title{text-align: center;}
 /**/
-.screens-slider-box{max-width: 300px; margin: 0 auto;}
+.screens-slider-box{max-width: 600px; margin: 0 auto;}
 .screens-slider-box img{width: 100%; height: auto;}
 .align-slider-article{height: 535px;}
+
+
+.release-slider-box{max-width: 600px; margin: 0 auto;}
+.release-slider-box img{width: 100%; height: auto;}
+
 /**/
 .bottom-screens-align{padding-bottom: 70px;}
 .counters-box{text-align: center; color: #fff;}
