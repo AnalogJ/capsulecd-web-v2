@@ -30,7 +30,7 @@ export function getAuthHttp(http: any) {
     noJwtError: true,
     headerPrefix: 'JWT',
     tokenGetter: (() => localStorage.getItem('id_token')),
-    globalHeaders: [{'Accept': 'application/json'}]
+    globalHeaders: [{'Content-Type':'application/json'}]
   }), http);
 }
 
