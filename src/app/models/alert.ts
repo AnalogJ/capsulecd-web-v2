@@ -1,4 +1,4 @@
-const enum AlertType {
+export const enum AlertType {
     failure,
     success
 }

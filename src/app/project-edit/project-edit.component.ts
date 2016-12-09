@@ -63,7 +63,7 @@ export class ProjectEditComponent implements OnInit {
     this.alerts.splice(i, 1);
   }
 
-  packageTypeChanged = function(){
+  packageTypeChanged(){
     this.projectData.dockerImage = this.defaultSettings[this.projectData.packageType].image
   }
 
@@ -79,7 +79,7 @@ export class ProjectEditComponent implements OnInit {
       "Settings": this.projectData
     };
     this.loading.saveSettings = true
-    return this.apiService.editProject(this.orgId, this.repoId, payload)
+    this.apiService.editProject(this.orgId, this.repoId, payload)
         .subscribe(
             data => {
               console.log(data)
@@ -95,7 +95,7 @@ export class ProjectEditComponent implements OnInit {
     };
     payload.Secrets[this.secretName] = this.secretValue;
     this.loading.addSecret = true;
-    return this.apiService.editProject(this.orgId, this.repoId, payload)
+    this.apiService.editProject(this.orgId, this.repoId, payload)
         .subscribe(
             data => {
               this.projectSecrets[this.secretName] = (this.secretValue.length > 4) ? this.secretValue.substr(this.secretValue.length - 4) : this.secretValue.substr(this.secretValue.length - 2)
