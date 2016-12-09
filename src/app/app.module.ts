@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -17,10 +17,21 @@ import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
 import { ApiService } from './services/api.service'
 import { CacheService } from './services/cache.service'
 import { AuthGuard } from './services/auth-guard.service'
-import { provideAuth } from 'angular2-jwt';
+import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import {MomentModule} from 'angular2-moment';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import { ProjectDeployLogsComponent } from './project-deploy-logs/project-deploy-logs.component';
+
+
+
+
+export function getAuthHttp(http: any) {
+  return new AuthHttp(new AuthConfig({
+    noJwtError: true,
+    headerPrefix: 'JWT',
+    globalHeaders: [{'Accept': 'application/json'}]
+  }), http);
+}
 
 
 
@@ -64,9 +75,11 @@ import { ProjectDeployLogsComponent } from './project-deploy-logs/project-deploy
     ApiService,
     CacheService,
     AuthGuard,
-    provideAuth({
-      globalHeaders: [{'Content-Type':'application/json'}]
-    })
+    {
+      provide: AuthHttp,
+      useFactory: getAuthHttp,
+      deps: [Http]
+    }
   ],
   bootstrap: [AppComponent]
 })
