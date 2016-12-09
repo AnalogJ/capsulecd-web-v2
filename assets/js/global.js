@@ -412,47 +412,7 @@ $(function() {
 	});
 
 
-	/*==========================*/
-	/* 09 - contact form submit */
-	/*==========================*/
-	var formPopupTimeout;
-	$('.contact-form').on("submit", function(){
-		clearTimeout(formPopupTimeout);
-						   
-		$('.error-class').removeClass('error-class');						   
-		var msg = 'The following fields should be filled:',
-			error = 0,
-			pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 
-
-		if ($.trim($('.contact-form input[name="name"]').val()) === '') {error = 1; $('.contact-form input[name="name"]').addClass('error-class'); msg = msg +  '\n - Name';}
-        if (!pattern.test($.trim($('.contact-form input[name="email"]').val()))) {error = 1; $('.contact-form input[name="email"]').addClass('error-class'); msg = msg +  '\n - Email';}
-		if ($.trim($('.contact-form textarea[name="text"]').val()) === '') {error = 1; $('.contact-form textarea[name="text"]').addClass('error-class'); msg = msg +  '\n - Your Message';}
-
-        if (error){
-			$('.form-popup .text').text(msg);
-			$('.form-popup').fadeIn(300);
-			formPopupTimeout = setTimeout(function(){$('.form-popup').fadeOut(300);}, 3000);
-        }else{
-            var url = 'send_mail.php',
-            	name = $.trim($('.contact-form input[name="name"]').val()),
-            	email = $.trim($('.contact-form input[name="email"]').val()),
-            	subject = $.trim($('.contact-form input[name="subject"]').val()),
-            	department = $.trim($('.contact-form select[name="department"]').val()),
-            	text = $.trim($('.contact-form textarea[name="text"]').val()),
-            	mailto = $.trim($('.contact-form input[name="mailto"]').val());
-
-            $.post(url,{'name':name,'email':email,'subject':subject,'department':department,'text':text,'mailto':mailto},function(data){
-	        	$('.form-popup .text').text('Thank You for contacting us!');
-				$('.form-popup').fadeIn(300);
-				formPopupTimeout = setTimeout(function(){$('.form-popup').fadeOut(300);}, 3000);
-
-	        	$('.contact-form').append('<input type="reset" class="reset-button"/>');
-	        	$('.reset-button').click().remove();
-			});
-        }
-	  	return false;
-	});
 
 	$(document).on('focus', '.error-class', function(){
 		$(this).removeClass('error-class');
