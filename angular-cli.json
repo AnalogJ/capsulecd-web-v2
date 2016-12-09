@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "1.0.0-beta.20-4",
+    "version": "1.0.0-beta.22-1",
     "name": "capsulecd-web-v2"
   },
   "apps": [
@@ -9,7 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "homepage.html",
+        "index.html",
 
         "android-chrome-192x192.png",
         "android-chrome-512x512.png",
@@ -26,7 +26,7 @@
         "mstile-70x70.png",
         "safari-pinned-tab.svg"
       ],
-      "index": "index.html",
+      "index": "angular.html",
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",

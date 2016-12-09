@@ -61,7 +61,7 @@ export class ProjectDeployComponent implements OnInit {
   createRelease(){
     //TODO: this function should also send version increment & custom changelog.
     this.loading.createRelease = true;
-    this.apiService.deployProject(this.orgId, this.repoId, this.prNumber)
+    this.apiService.deployProject(this.orgId, this.repoId, this.prNumber, this.versionIncr)
         .subscribe(
             data => {
               console.log(data)

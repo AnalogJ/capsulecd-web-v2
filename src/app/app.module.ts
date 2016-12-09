@@ -20,6 +20,7 @@ import { AuthGuard } from './services/auth-guard.service'
 import { provideAuth } from 'angular2-jwt';
 import {MomentModule} from 'angular2-moment';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
+import { ProjectDeployLogsComponent } from './project-deploy-logs/project-deploy-logs.component';
 
 
 
@@ -32,7 +33,8 @@ import { InfiniteScrollModule } from 'angular2-infinite-scroll';
     ProjectEditComponent,
     ProjectDeployComponent,
     AuthConnectComponent,
-    AuthCallbackComponent
+    AuthCallbackComponent,
+    ProjectDeployLogsComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,7 @@ import { InfiniteScrollModule } from 'angular2-infinite-scroll';
       { path: 'project/create', component: ProjectCreateComponent, canActivate: [AuthGuard] },
       { path: 'project/:serviceType/:orgId/:repoId/edit', component: ProjectEditComponent, canActivate: [AuthGuard] },
       { path: 'project/:serviceType/:orgId/:repoId/pullrequests/:prNumber', component: ProjectDeployComponent, canActivate: [AuthGuard] },
+      { path: 'project/:serviceType/:orgId/:repoId/pullrequests/:prNumber/logs', component: ProjectDeployLogsComponent, canActivate: [AuthGuard] },
 
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
       // { path: '**', component: PageNotFoundComponent }
