@@ -366,14 +366,14 @@ pre.pr-body {
     position: relative;
 }
 
-.terminal-window header {
+.terminal-window .term-header {
     background: #E0E8F0;
     height: 30px;
     border-radius: 8px 8px 0 0;
     padding-left: 10px;
 }
 
-.terminal-window header .button {
+.terminal-window .term-header .term-button {
     width: 12px;
     height: 12px;
     margin: 10px 4px 0 0;
@@ -381,15 +381,15 @@ pre.pr-body {
     border-radius: 8px;
 }
 
-.terminal-window header .button.green {
+.terminal-window .term-header .term-button.green {
     background: #3BB662;
 }
 
-.terminal-window header .button.yellow {
+.terminal-window .term-header .term-button.yellow {
     background: #E5C30F;
 }
 
-.terminal-window header .button.red {
+.terminal-window .term-header .term-button.red {
     background: #E75448;
 }
 
