@@ -118,20 +118,11 @@ export class ApiService {
         .catch(this.handleError);
   }
 
-  getSignedLogUrl(orgId:string, repoId: string, prNumber: number): Observable<any> {
+  getDeployLogs(orgId:string, repoId: string, prNumber: number): Observable<any> {
     return this.authHttp.get(`${AppSettings.API_ENDPOINT}/logs/${this.serviceType()}/${orgId}/${repoId}/${prNumber}`)
         .map(this.extractData)
         .catch(this.handleError);
   }
-
-  getDeployLogs(url:string, signedHeaders:any): Observable<any>{
-    let headers = new Headers(signedHeaders);
-    let options = new RequestOptions({ headers: headers });
-    return this.http.get(url, options)
-        .map(this.extractData)
-        .catch(this.handleError);
-  }
-
 
   fetchOrgs(page?:number): Observable<any>{
     let params: URLSearchParams = new URLSearchParams();
