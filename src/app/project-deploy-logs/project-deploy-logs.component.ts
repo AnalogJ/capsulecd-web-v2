@@ -14,8 +14,15 @@ export class ProjectDeployLogsComponent implements OnInit {
   repoId: string;
   orgId: string;
   prNumber: number;
+  projectData: any = {};
+  pullRequest: any = {};
+
   alerts: Alert[] = [];
-  loading = true;
+  loading = {
+    logs: true,
+    project: true,
+    pullRequest: true
+  };
   logsubscription: Subscription;
 
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
@@ -27,7 +34,7 @@ export class ProjectDeployLogsComponent implements OnInit {
 
     // let timer = TimerObservable.create(0, 1000); //start at 0ms and re-run every second (1000ms)
     // this.logsubscription = timer.subscribe(t => {
-    //   console.log("TICKS", t)
+    // console.log("TICKS", t)
       this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber)
           .subscribe(
               data => {
@@ -37,11 +44,31 @@ export class ProjectDeployLogsComponent implements OnInit {
                 this.alerts.push(new Alert('Error retrieving project', error.message))
                 this.logsubscription.unsubscribe();
               },
-              () => this.loading = false
+              () => this.loading.logs = false
 
           );
     // });
 
+
+    this.apiService.getProject(this.orgId, this.repoId)
+        .subscribe(
+            data => {
+              console.log(data)
+              this.projectData = data.Settings || this.projectData;
+            },
+            error => this.alerts.push(new Alert('Error retrieving project', error.message)),
+            () => this.loading.project = false
+        );
+
+    this.apiService.fetchOrgRepoPullRequest(this.orgId, this.repoId, this.prNumber)
+        .subscribe(
+            data => {
+              console.log(data)
+              this.pullRequest = data
+            },
+            error => this.alerts.push(new Alert('Error retrieving pull request', error.message)),
+            () => this.loading.pullRequest = false
+        );
   }
   ngOnDestroy() {
     this.logsubscription.unsubscribe();
