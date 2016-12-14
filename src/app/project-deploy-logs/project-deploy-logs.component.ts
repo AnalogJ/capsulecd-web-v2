@@ -25,18 +25,22 @@ export class ProjectDeployLogsComponent implements OnInit {
     this.orgId = this.activatedRoute.snapshot.params['orgId'];
     this.prNumber = this.activatedRoute.snapshot.params['prNumber'];
 
-    let timer = TimerObservable.create(0, 1000); //start at 0ms and re-run every second (1000ms)
-    this.logsubscription = timer.subscribe(t => {
-      console.log("TICKS", t)
+    // let timer = TimerObservable.create(0, 1000); //start at 0ms and re-run every second (1000ms)
+    // this.logsubscription = timer.subscribe(t => {
+    //   console.log("TICKS", t)
       this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber)
           .subscribe(
               data => {
                 console.log(data)
               },
-              error => this.alerts.push(new Alert('Error retrieving project', error.message)),
+              error => {
+                this.alerts.push(new Alert('Error retrieving project', error.message))
+                this.logsubscription.unsubscribe();
+              },
               () => this.loading = false
+
           );
-    });
+    // });
 
   }
   ngOnDestroy() {
