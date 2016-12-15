@@ -16,6 +16,7 @@ export class ProjectDeployLogsComponent implements OnInit {
   prNumber: number;
   projectData: any = {};
   pullRequest: any = {};
+  logs: Array = [];
 
   alerts: Alert[] = [];
   loading = {
@@ -38,6 +39,7 @@ export class ProjectDeployLogsComponent implements OnInit {
       this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber)
           .subscribe(
               data => {
+
                 console.log(data)
               },
               error => {

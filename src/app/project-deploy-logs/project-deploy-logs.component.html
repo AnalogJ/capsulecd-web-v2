@@ -63,9 +63,9 @@
               </div>
               <section class="terminal">
                   <div class="history">
-
-
-
+                    <div *ngFor="let log of logs">
+                        <span *ngClass="log.stream">{{log.line}}</span>
+                    </div>
                   </div>
                   $&nbsp;<span class="prompt"></span>
                   <span class="typed-cursor"></span>
