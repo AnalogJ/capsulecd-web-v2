@@ -5,5 +5,6 @@ export class Project {
     RepoId: string;
     OwnerUsername: string;
     Settings: any;
-    Secrets: any
+    Secrets: any;
+    Pending: any;
 }
