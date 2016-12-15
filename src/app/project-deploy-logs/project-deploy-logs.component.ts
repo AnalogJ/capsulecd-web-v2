@@ -16,7 +16,7 @@ export class ProjectDeployLogsComponent implements OnInit {
   prNumber: number;
   projectData: any = {};
   pullRequest: any = {};
-  logs: Array = [];
+  logs: Array<any> = [];
 
   alerts: Alert[] = [];
   loading = {
