@@ -35,13 +35,13 @@ export class ProjectDeployLogsComponent implements OnInit {
     this.orgId = this.activatedRoute.snapshot.params['orgId'];
     this.prNumber = this.activatedRoute.snapshot.params['prNumber'];
 
-    let timer = TimerObservable.create(0, 1000); //start at 0ms and re-run every second (1000ms)
+    let timer = TimerObservable.create(0, 5000); //start at 0ms and re-run every second (1000ms)
     this.logSubscription = timer.subscribe(t => {
     console.log("TICKS", t)
       this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber, (this.firstRequest? 0 : Date.now() ))
           .subscribe(
               log_lines => {
-                if(log_lines.length == 0){
+                if(!log_lines || log_lines.length == 0){
                     this.logSubscription.unsubscribe();
                 }
                 else{
