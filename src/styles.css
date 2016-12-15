@@ -406,6 +406,10 @@ pre.pr-body {
     overflow: auto;
 }
 
+.terminal-window section.terminal .history span.stderr {
+    color: #E75448;
+}
+
 .terminal-window section.terminal .typed-cursor {
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
