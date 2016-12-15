@@ -38,9 +38,9 @@ export class ProjectDeployLogsComponent implements OnInit {
     // console.log("TICKS", t)
       this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber)
           .subscribe(
-              data => {
+              log_lines => {
 
-                console.log(data)
+                this.logs = log_lines
               },
               error => {
                 this.alerts.push(new Alert('Error retrieving project', error.message))
