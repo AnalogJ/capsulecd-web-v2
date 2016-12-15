@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import {Alert} from '../models/alert'
@@ -26,7 +26,7 @@ export class ProjectDeployComponent implements OnInit {
 
   versionIncr: string = 'patch';
 
-  constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
+  constructor(private apiService: ApiService,private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.repoId = this.activatedRoute.snapshot.params['repoId'];
@@ -64,8 +64,7 @@ export class ProjectDeployComponent implements OnInit {
     this.apiService.deployProject(this.orgId, this.repoId, this.prNumber, this.versionIncr)
         .subscribe(
             data => {
-              console.log(data)
-              //todo change path.
+              this.router.navigate([`/project/${this.apiService.serviceType()}/${this.orgId}/${this.repoId}/${this.prNumber}/logs`])
             },
             error => this.alerts.push(new Alert('Error creating new release', error.message)),
             () => this.loading.createRelease = false

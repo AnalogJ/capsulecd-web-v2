@@ -24,7 +24,9 @@ export class ProjectDeployLogsComponent implements OnInit {
     project: true,
     pullRequest: true
   };
-  logsubscription: Subscription;
+  firstRequest: boolean = true;
+
+  logSubscription: Subscription;
 
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
 
@@ -33,23 +35,30 @@ export class ProjectDeployLogsComponent implements OnInit {
     this.orgId = this.activatedRoute.snapshot.params['orgId'];
     this.prNumber = this.activatedRoute.snapshot.params['prNumber'];
 
-    // let timer = TimerObservable.create(0, 1000); //start at 0ms and re-run every second (1000ms)
-    // this.logsubscription = timer.subscribe(t => {
-    // console.log("TICKS", t)
-      this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber)
+    let timer = TimerObservable.create(0, 1000); //start at 0ms and re-run every second (1000ms)
+    this.logSubscription = timer.subscribe(t => {
+    console.log("TICKS", t)
+      this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber, (this.firstRequest? 0 : Date.now() ))
           .subscribe(
               log_lines => {
-
-                this.logs = log_lines
+                if(log_lines.length == 0){
+                    this.logSubscription.unsubscribe();
+                }
+                else{
+                    this.logs.concat(log_lines);
+                }
               },
               error => {
                 this.alerts.push(new Alert('Error retrieving project', error.message))
-                this.logsubscription.unsubscribe();
+                this.logSubscription.unsubscribe();
               },
-              () => this.loading.logs = false
+              () => {
+                  this.loading.logs = false;
+                  this.firstRequest = false;
+              }
 
           );
-    // });
+    });
 
 
     this.apiService.getProject(this.orgId, this.repoId)
@@ -73,7 +82,7 @@ export class ProjectDeployLogsComponent implements OnInit {
         );
   }
   ngOnDestroy() {
-    this.logsubscription.unsubscribe();
+    this.logSubscription.unsubscribe();
   }
 
   closeAlert(i:number):void {

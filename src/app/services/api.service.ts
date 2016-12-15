@@ -118,8 +118,12 @@ export class ApiService {
         .catch(this.handleError);
   }
 
-  getDeployLogs(orgId:string, repoId: string, prNumber: number): Observable<any> {
-    return this.authHttp.get(`${AppSettings.API_ENDPOINT}/logs/${this.serviceType()}/${orgId}/${repoId}/${prNumber}`)
+  getDeployLogs(orgId:string, repoId: string, prNumber: number, since?: number): Observable<any> {
+    let params: URLSearchParams = new URLSearchParams();
+    if(since){
+      params.set('since', since.toString());
+    }
+    return this.authHttp.get(`${AppSettings.API_ENDPOINT}/logs/${this.serviceType()}/${orgId}/${repoId}/${prNumber}`,{ search: params })
         .map(this.extractData)
         .catch(this.handleError);
   }
