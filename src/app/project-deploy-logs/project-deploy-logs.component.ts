@@ -45,7 +45,7 @@ export class ProjectDeployLogsComponent implements OnInit {
                     this.logSubscription.unsubscribe();
                 }
                 else{
-                    this.logs.concat(log_lines);
+                    this.logs = this.logs.concat(log_lines);
                 }
               },
               error => {
