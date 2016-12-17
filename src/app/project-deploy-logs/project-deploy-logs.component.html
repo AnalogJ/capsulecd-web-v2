@@ -29,7 +29,7 @@
                   <li><strong>Pull Request:</strong> {{prNumber}}</li>
                   <li><strong>Status:</strong> {{containerState.Status}} <span *ngIf="!containerState.Running">({{containerState.ExitCode}})</span></li>
                   <li><strong>Started:</strong> {{containerState.StartedAt | amTimeAgo}}</li>
-                  <li *ngIf="!containerState.Running"><strong>Duration:</strong> {{containerState.FinishedAt | amDifference: containerState.StartedAt :'minutes' : true}} minutes</li>
+                  <li *ngIf="!containerState.Running"><strong>Duration:</strong> {{containerState.FinishedAt | amDifference: containerState.StartedAt :'minutes'}} minutes</li>
               </ul>
           </div>
         </div>
