@@ -5,27 +5,33 @@ export class AppSettings {
         return {
             'default': {
                 display: 'Custom',
-                image: 'analogj/capsulecd'
+                image: 'analogj/capsulecd',
+                recommendedSecrets:[]
             },
             'chef': {
                 display: 'Chef',
-                image: 'analogj/capsulecd:chef'
+                image: 'analogj/capsulecd:chef',
+                recommendedSecrets:['CAPSULE_CHEF_SUPERMARKET_USERNAME','CAPSULE_CHEF_SUPERMARKET_KEY', 'CAPSULE_CHEF_SUPERMARKET_TYPE']
             },
             'javascript': {
                 display: 'Javascript (Bower + Npm)',
-                image: 'analogj/capsulecd:javascript'
+                image: 'analogj/capsulecd:javascript',
+                recommendedSecrets:['CAPSULE_NPM_AUTH_TOKEN']
             },
             'node': {
                 display: 'Node',
-                image: 'analogj/capsulecd:node'
+                image: 'analogj/capsulecd:node',
+                recommendedSecrets:['CAPSULE_NPM_AUTH_TOKEN']
             },
             'python': {
                 display: 'Python',
-                image: 'analogj/capsulecd:python'
+                image: 'analogj/capsulecd:python',
+                recommendedSecrets:['CAPSULE_PYPI_USERNAME', 'CAPSULE_PYPI_PASSWORD']
             },
             'ruby': {
                 display: 'Ruby',
-                image: 'analogj/capsulecd:ruby'
+                image: 'analogj/capsulecd:ruby',
+                recommendedSecrets:['CAPSULE_RUBYGEMS_API_KEY']
             }
 
         }
