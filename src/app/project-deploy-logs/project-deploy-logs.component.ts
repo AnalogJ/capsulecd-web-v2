@@ -38,7 +38,7 @@ export class ProjectDeployLogsComponent implements OnInit {
     let timer = TimerObservable.create(0, 5000); //start at 0ms and re-run every second (1000ms)
     this.logSubscription = timer.subscribe(t => {
     console.log("TICKS", t)
-      this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber, (this.firstRequest? 0 : Date.now() ))
+      this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber, (this.firstRequest? 0 : (Date.now()/1000) ))
           .subscribe(
               log_lines => {
                 if(!log_lines || log_lines.length == 0){
