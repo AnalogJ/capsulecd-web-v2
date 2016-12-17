@@ -64,7 +64,7 @@ export class ProjectDeployComponent implements OnInit {
     this.apiService.deployProject(this.orgId, this.repoId, this.prNumber, this.versionIncr)
         .subscribe(
             data => {
-              this.router.navigate([`/project/${this.apiService.serviceType()}/${this.orgId}/${this.repoId}/${this.prNumber}/logs`])
+              this.router.navigate([`/project/${this.apiService.serviceType()}/${this.orgId}/${this.repoId}/pullrequests/${this.prNumber}/logs`])
             },
             error => this.alerts.push(new Alert('Error creating new release', error.message)),
             () => this.loading.createRelease = false

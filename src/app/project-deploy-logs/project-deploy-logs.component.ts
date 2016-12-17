@@ -4,7 +4,7 @@ import { ApiService } from '../services/api.service';
 import {Alert} from '../models/alert'
 import {TimerObservable} from "rxjs/observable/TimerObservable";
 import {Subscription} from "rxjs";
-
+import {ContainerState} from '../models/container-state'
 @Component({
   selector: 'app-project-deploy-logs',
   templateUrl: './project-deploy-logs.component.html',
@@ -27,6 +27,8 @@ export class ProjectDeployLogsComponent implements OnInit {
   firstRequest: boolean = true;
 
   logSubscription: Subscription;
+  containerState: ContainerState = new ContainerState();
+
 
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
 
@@ -40,12 +42,13 @@ export class ProjectDeployLogsComponent implements OnInit {
     console.log("TICKS", t)
       this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber, (this.firstRequest? 0 : (Date.now()/1000) ))
           .subscribe(
-              log_lines => {
-                if(!log_lines || log_lines.length == 0){
+              data => {
+                  this.containerState = data.State;
+                if(!data.Lines || data.Lines.length == 0){
                     this.logSubscription.unsubscribe();
                 }
                 else{
-                    this.logs = this.logs.concat(log_lines);
+                    this.logs = this.logs.concat(data.Lines);
                 }
               },
               error => {

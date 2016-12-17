@@ -25,10 +25,10 @@
           <div class="typography-article">
               <h3 class="widget-title">Info</h3>
               <ul class="list-style-3">
-                  <li><b>Repository: {{orgId + '/' + repoId}}</b></li>
-                  <li><b>Pull Request: {{prNumber}}</b></li>
-                  <li><b>Status: pending</b></li>
-                  <li><b>Date:</b></li>
+                  <li><strong>Repository:</strong> {{orgId + '/' + repoId}}</li>
+                  <li><strong>Pull Request:</strong> {{prNumber}}</li>
+                  <li><strong>Status:</strong> {{containerState.Status}}</li>
+                  <li><strong>Started:</strong> {{containerState.StartedAt | amTimeAgo}}</li>
               </ul>
           </div>
         </div>
