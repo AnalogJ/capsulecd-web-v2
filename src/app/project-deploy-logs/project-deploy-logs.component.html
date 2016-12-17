@@ -27,23 +27,24 @@
               <ul class="list-style-3">
                   <li><strong>Repository:</strong> {{orgId + '/' + repoId}}</li>
                   <li><strong>Pull Request:</strong> {{prNumber}}</li>
-                  <li><strong>Status:</strong> {{containerState.Status}}</li>
+                  <li><strong>Status:</strong> {{containerState.Status}} <span *ngIf="!containerState.Running">({{containerState.ExitCode}})</span></li>
                   <li><strong>Started:</strong> {{containerState.StartedAt | amTimeAgo}}</li>
+                  <li *ngIf="!containerState.Running"><strong>Duration:</strong> {{containerState.FinishedAt | amDifference: containerState.StartedAt :'minutes' : true}} minutes</li>
               </ul>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="typography-article">
-            <h3 class="widget-title">Commits</h3>
-            <ul class="list-style-3">
-              <li>MP3, Ogg Vorbis or AAC can be used</li>
-              <li>48 kHz sample rate</li>
-              <li>16 bits per sample</li>
-              <li>2 channels for stereo audio</li>
-              <li>Audio bitrate 128-320Kbps</li>
-            </ul>
-          </div>
-        </div>
+        <!--<div class="col-md-6">-->
+          <!--<div class="typography-article">-->
+            <!--<h3 class="widget-title">Commits</h3>-->
+            <!--<ul class="list-style-3">-->
+              <!--<li>MP3, Ogg Vorbis or AAC can be used</li>-->
+              <!--<li>48 kHz sample rate</li>-->
+              <!--<li>16 bits per sample</li>-->
+              <!--<li>2 channels for stereo audio</li>-->
+              <!--<li>Audio bitrate 128-320Kbps</li>-->
+            <!--</ul>-->
+          <!--</div>-->
+        <!--</div>-->
 
       </div>
 
@@ -60,6 +61,9 @@
                   <div class="term-button green"></div>
                   <div class="term-button yellow"></div>
                   <div class="term-button red"></div>
+                  <div class="spinner">
+                      <span *ngIf="containerState.Running" class="glyphicon glyphicon-repeat mt-5 fast-right-spinner"></span>
+                  </div>
               </div>
               <section class="terminal">
                   <div class="history">

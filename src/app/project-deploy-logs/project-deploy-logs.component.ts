@@ -37,10 +37,9 @@ export class ProjectDeployLogsComponent implements OnInit {
     this.orgId = this.activatedRoute.snapshot.params['orgId'];
     this.prNumber = this.activatedRoute.snapshot.params['prNumber'];
 
-    let timer = TimerObservable.create(0, 5000); //start at 0ms and re-run every second (1000ms)
+    let timer = TimerObservable.create(0, 3000); //start at 0ms and re-run every 3 seconds (3000ms)
     this.logSubscription = timer.subscribe(t => {
-    console.log("TICKS", t)
-      this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber, (this.firstRequest? 0 : (Date.now()/1000) ))
+      this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber, (this.firstRequest? 0 : (Date.now()/1000))) //we need to send timestamp in milliseconds, not seconds.
           .subscribe(
               data => {
                   this.containerState = data.State;
