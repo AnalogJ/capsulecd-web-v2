@@ -39,7 +39,7 @@ export class ProjectDeployLogsComponent implements OnInit {
 
     let timer = TimerObservable.create(0, 3000); //start at 0ms and re-run every 3 seconds (3000ms)
     this.logSubscription = timer.subscribe(t => {
-      this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber, (this.firstRequest? 0 : (Date.now()/1000))) //we need to send timestamp in milliseconds, not seconds.
+      this.apiService.getDeployLogs(this.orgId, this.repoId, this.prNumber, (this.firstRequest? 0 : Math.round(Date.now()/1000))) //we need to send timestamp in milliseconds, not seconds.
           .subscribe(
               data => {
                   this.containerState = data.State;
