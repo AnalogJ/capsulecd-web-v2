@@ -25,11 +25,11 @@
           <div class="typography-article">
               <h3 class="widget-title">Info</h3>
               <ul class="list-style-3">
-                  <li><strong>Repository:</strong> {{orgId + '/' + repoId}}</li>
-                  <li><strong>Pull Request:</strong> {{prNumber}}</li>
-                  <li><strong>Status:</strong> {{containerState.Status}} <span *ngIf="!containerState.Running">({{containerState.ExitCode}})</span></li>
-                  <li><strong>Started:</strong> {{containerState.StartedAt | amTimeAgo}}</li>
-                  <li *ngIf="!containerState.Running"><strong>Duration:</strong> {{containerState.FinishedAt | amDifference: containerState.StartedAt :'minutes'}} minutes</li>
+                  <li><span class="text-strong">Repository:</span> {{orgId + '/' + repoId}}</li>
+                  <li><span class="text-strong">Pull Request:</span> {{prNumber}}</li>
+                  <li><span class="text-strong">Status:</span> {{containerState.Status}} <span *ngIf="!containerState.Running">({{containerState.ExitCode}})</span></li>
+                  <li><span class="text-strong">Started:</span> {{containerState.StartedAt | amTimeAgo}}</li>
+                  <li *ngIf="!containerState.Running"><span class="text-strong">Duration:</span> {{containerState.FinishedAt | amDifference: containerState.StartedAt :'minutes'}} minutes</li>
               </ul>
           </div>
         </div>
