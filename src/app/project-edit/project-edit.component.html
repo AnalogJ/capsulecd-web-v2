@@ -101,6 +101,14 @@
             </h4>
             <p>Add environment variables to the project build. You can add sensitive data (e.g. NPM, RubyGems API keys) here, rather than placing them in the repository.
             </p>
+            <p *ngIf="defaultSettings[projectData.packageType].recommendedSecrets.length">
+              {{defaultSettings[projectData.packageType].display}} packages should have the following secrets configured:
+              <strong>
+                {{defaultSettings[projectData.packageType].recommendedSecrets.join(', ')}}
+              </strong>
+            </p>
+
+
             <form class="form-horizontal project-form mb-40" >
               <fieldset>
 
