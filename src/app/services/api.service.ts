@@ -51,7 +51,8 @@ export class ApiService {
   authCallback(serviceType, queryParams): Observable<any> {
     let params: URLSearchParams = new URLSearchParams();
 
-    for(var [key, value] of queryParams){
+      for(var key in queryParams){
+        var value = queryParams[key];
       params.set(key, value)
     };
     console.log(params)
