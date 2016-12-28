@@ -54,6 +54,7 @@ export class ApiService {
     for(var [key, value] of queryParams){
       params.set(key, value)
     };
+    console.log(params)
 
     return this.http.get(`${AppSettings.API_ENDPOINT}/callback/${serviceType}`, {
       search: params
