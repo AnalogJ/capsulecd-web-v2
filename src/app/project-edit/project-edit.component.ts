@@ -98,7 +98,7 @@ export class ProjectEditComponent implements OnInit {
     this.apiService.editProject(this.orgId, this.repoId, payload)
         .subscribe(
             data => {
-              this.projectSecrets[this.secretName] = (this.secretValue.length > 4) ? this.secretValue.substr(this.secretValue.length - 4) : this.secretValue.substr(this.secretValue.length - 2)
+              this.projectSecrets[this.secretName] = {last4:(this.secretValue.length > 4) ? this.secretValue.substr(this.secretValue.length - 4) : this.secretValue.substr(this.secretValue.length - 2)}
               this.projectSecretsKeys = Object.keys(this.projectSecrets)
               this.secretName = '';
               this.secretValue = '';
