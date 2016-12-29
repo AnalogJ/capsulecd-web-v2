@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Project } from '../models/project'
 import { ApiService } from '../services/api.service';
 import {Alert} from '../models/alert'
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-dashboard',
@@ -18,15 +19,20 @@ export class DashboardComponent implements OnInit {
   projectPullRequests = []
   alerts: Alert[] = [];
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService,private router: Router) { }
 
   ngOnInit() {
     this.apiService.getProjects().subscribe(
         data => {
           console.log(data);
           this.projects = data;
-          this.selectedProject = this.projects[0]
-          this.getProjectPullRequests()
+            if(this.projects.length == 0){
+                this.router.navigate(['/project/create'])
+            }
+            else{
+                this.selectedProject = this.projects[0]
+                this.getProjectPullRequests()
+            }
         },
         error => this.alerts.push(new Alert('Error retrieving projects', error.message)),
         () => this.loading.projects = false
