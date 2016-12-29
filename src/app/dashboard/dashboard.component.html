@@ -68,7 +68,7 @@
                   <pre class="pr-body">{{pullRequest.body || '...'}}</pre>
 
                   <a *ngIf="selectedProject.Pending[pullRequest.number]" class="button black size-3 pull-right mt-15" [routerLink]="['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/pullrequests/' + pullRequest.number + '/logs' ]"><span>View Logs</span></a>
-                  <a class="button size-3 pull-right mt-15" [routerLink]="['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/pullrequests/' + pullRequest.number ]"><span>Create Release</span></a>
+                  <a class="button size-3 pull-right mt-15 mr-10" [routerLink]="['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/pullrequests/' + pullRequest.number ]"><span>Create Release</span></a>
 
                 </div>
 
