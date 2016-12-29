@@ -61,7 +61,7 @@ export class ProjectDeployComponent implements OnInit {
   createRelease(){
     //TODO: this function should also send version increment & custom changelog.
     this.loading.createRelease = true;
-    this.apiService.deployProject(this.orgId, this.repoId, this.prNumber, {versionIncr: this.versionIncr})
+    this.apiService.publishProject(this.orgId, this.repoId, this.prNumber, {versionIncr: this.versionIncr})
         .subscribe(
             data => {
               this.router.navigate([`/project/${this.apiService.serviceType()}/${this.orgId}/${this.repoId}/pullrequests/${this.prNumber}/logs`])

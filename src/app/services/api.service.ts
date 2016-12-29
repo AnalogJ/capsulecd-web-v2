@@ -109,18 +109,18 @@ export class ApiService {
   }
 
   deleteProject(orgId:string, repoId:string): Observable<any> {
-    return this.authHttp.delete(`${AppSettings.API_ENDPOINT}/process/${this.serviceType()}/${orgId}/${repoId}`)
+    return this.authHttp.delete(`${AppSettings.API_ENDPOINT}/project/${this.serviceType()}/${orgId}/${repoId}`)
         .map(this.extractData)
         .catch(this.handleError);
   }
 
-  deployProject(orgId:string, repoId:string, prNumber:number, settings?: any): Observable<any>{
-    return this.authHttp.post(`${AppSettings.API_ENDPOINT}/process/${this.serviceType()}/${orgId}/${repoId}/${prNumber}`, settings || {})
+  publishProject(orgId:string, repoId:string, prNumber:number, settings?: any): Observable<any>{
+    return this.authHttp.post(`${AppSettings.API_ENDPOINT}/publish/${this.serviceType()}/${orgId}/${repoId}/${prNumber}`, settings || {})
         .map(this.extractData)
         .catch(this.handleError);
   }
 
-  getDeployLogs(orgId:string, repoId: string, prNumber: number, since?: number): Observable<any> {
+  getPublishLogs(orgId:string, repoId: string, prNumber: number, since?: number): Observable<any> {
     let params: URLSearchParams = new URLSearchParams();
     if(since){
       params.set('since', since.toString());
