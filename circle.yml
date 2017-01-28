@@ -15,4 +15,5 @@ dependencies:
 
 test:
   override:
+    #the following commands deploy to the beta.capsulecd.com domain.
     - ng github-pages:deploy --message "Autodeploy gh-pages" --base-href "/"
