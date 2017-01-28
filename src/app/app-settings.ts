@@ -1,6 +1,6 @@
+import { environment } from '../environments/environment'
 export class AppSettings {
-    public static get API_VERSION(): string { return 'beta' }
-    public static get API_ENDPOINT(): string { return 'https://api.capsulecd.com/' + AppSettings.API_VERSION; }
+    public static get API_ENDPOINT(): string { return 'https://api.capsulecd.com/' + environment.apiVersion; }
 
     public static get DOCKER_IMAGES(): any {
         return {
