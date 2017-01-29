@@ -22,7 +22,7 @@ export class ProjectDeployComponent implements OnInit {
     project: true,
     pullRequest: true,
     createRelease: false
-  }
+  };
 
   versionIncr: string = 'patch';
 
@@ -35,7 +35,7 @@ export class ProjectDeployComponent implements OnInit {
     this.apiService.getProject(this.orgId, this.repoId)
         .subscribe(
             data => {
-              console.log(data)
+              console.log(data);
               this.projectData = data.Settings || this.projectData;
               this.projectSecrets = data.Secrets || this.projectSecrets;
               this.versionIncr = this.projectData.versionIncr || this.versionIncr
@@ -48,7 +48,7 @@ export class ProjectDeployComponent implements OnInit {
     this.apiService.fetchOrgRepoPullRequest(this.orgId, this.repoId, this.prNumber)
         .subscribe(
             data => {
-              console.log(data)
+              console.log(data);
               this.pullRequest = data
             },
             error => this.alerts.push(new Alert('Error retrieving pull request', error.message)),

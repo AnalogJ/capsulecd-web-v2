@@ -14,7 +14,7 @@ import {Alert} from '../models/alert'
 })
 export class ProjectCreateComponent implements OnInit {
   orgs: Organization[] = [];
-  orgRepos: Repository[] = []
+  orgRepos: Repository[] = [];
   orgReposPage: number = 1;
   orgReposAll: boolean = false;
   selectedOrgIndex: number = 0;
@@ -22,7 +22,7 @@ export class ProjectCreateComponent implements OnInit {
     fetchOrgs: true,
     fetchOrgRepos: false,
     createProject: false
-  }
+  };
   alerts: Alert[] = [];
 
 
@@ -32,9 +32,9 @@ export class ProjectCreateComponent implements OnInit {
     this.apiService.fetchOrgs()
         .subscribe(
             data => {
-              console.log(data)
+              console.log(data);
               this.orgs = data;
-              this.selectedOrgIndex = 0
+              this.selectedOrgIndex = 0;
               this.fetchSelectedOrgRepos()
             },
             error => this.alerts.push(new Alert('Error retrieving organizations', error.message)),
@@ -49,17 +49,17 @@ export class ProjectCreateComponent implements OnInit {
   resetPagination(){
     this.orgReposPage = 1; //this is the starting page when retriving repos from the api
     this.orgReposAll = false;  // this deterimes if all repos for the selected Org have been retrived from Github
-    this.loading.fetchOrgRepos = false //this specifies if there is currently a repo request in progress.
+    this.loading.fetchOrgRepos = false; //this specifies if there is currently a repo request in progress.
   }
 
   fetchSelectedOrgRepos(){
 
-    this.resetPagination()
+    this.resetPagination();
     this.loading.fetchOrgRepos = true;
     this.apiService.fetchOrgRepos(this.orgs[this.selectedOrgIndex].login, this.orgReposPage)
         .subscribe(
             data => {
-              console.log(data)
+              console.log(data);
               this.orgRepos = data;
             },
             error => this.alerts.push(new Alert('Error retrieving organization repositories', error.message)),
@@ -76,7 +76,7 @@ export class ProjectCreateComponent implements OnInit {
     this.apiService.fetchOrgRepos(this.orgs[this.selectedOrgIndex].login, this.orgReposPage)
         .subscribe(
             data => {
-              console.log(data)
+              console.log(data);
               if(data.length == 0){
                 this.orgReposAll = true;
               }
@@ -92,7 +92,7 @@ export class ProjectCreateComponent implements OnInit {
 
 
   selectNextOrg(nextIndex){
-    this.selectedOrgIndex = (nextIndex % (this.orgs.length -1))
+    this.selectedOrgIndex = (nextIndex % (this.orgs.length -1));
     this.fetchSelectedOrgRepos()
   }
   selectPrevOrg(prevIndex){
@@ -106,12 +106,12 @@ export class ProjectCreateComponent implements OnInit {
   }
 
     createProject(orgId, repoId){
-        this.loading.createProject = true
+        this.loading.createProject = true;
         this.apiService.createProject(orgId, repoId)
 
             .subscribe(
                 data => {
-                    console.log(data)
+                    console.log(data);
                     this.router.navigate([`/project/${this.apiService.serviceType()}/${orgId}/${repoId}/edit`])
 
                 },

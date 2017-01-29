@@ -12,12 +12,12 @@ import {Router} from '@angular/router'
 export class AuthCallbackComponent implements AfterViewInit {
   @ViewChild('childModal') public childModal:ModalDirective;
 
-  successfulCallback = true
+  successfulCallback = true;
 
   constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngAfterViewInit() {
-    this.childModal.show()
+    this.childModal.show();
 
     // process the query string for the code
     console.log('GETTING QUERY STRING PARAMS');
@@ -27,9 +27,9 @@ export class AuthCallbackComponent implements AfterViewInit {
     this.apiService.authCallback(this.activatedRoute.snapshot.params['serviceType'], this.activatedRoute.snapshot.queryParams)
         .subscribe(
             data => {
-              console.log(data)
-              localStorage.setItem('id_token', data.token) //set the JWT token
-              localStorage.setItem('service_type', data.service_type)
+              console.log(data);
+              localStorage.setItem('id_token', data.token); //set the JWT token
+              localStorage.setItem('service_type', data.service_type);
 
               this.router.navigate(['/dashboard'])
             },

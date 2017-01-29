@@ -13,10 +13,10 @@ export class DashboardComponent implements OnInit {
   loading = {
       projects: true,
       pullrequests: {}
-  }
+  };
   projects: Project[] = [];
   selectedProject: Project = new Project();
-  projectPullRequests = []
+  projectPullRequests = [];
   alerts: Alert[] = [];
 
   constructor(private apiService: ApiService,private router: Router) { }
@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
                 this.router.navigate(['/project/create'])
             }
             else{
-                this.selectedProject = this.projects[0]
+                this.selectedProject = this.projects[0];
                 this.getProjectPullRequests()
             }
         },
@@ -40,7 +40,7 @@ export class DashboardComponent implements OnInit {
   }
 
   private getProjectPullRequests(){
-    this.loading.pullrequests[this.selectedProject.RepoId] = true
+    this.loading.pullrequests[this.selectedProject.RepoId] = true;
     this.apiService.fetchOrgRepoPullRequests(this.selectedProject.OrgId, this.selectedProject.RepoId).subscribe(
         data => {
             console.log(data);
