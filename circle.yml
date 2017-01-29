@@ -23,8 +23,12 @@ deployment:
   production:
     branch: production
     commands:
+      - ls
+      - pwd
+      - ls /
       - ng build --prod --output-path ../dist --base-href "/"
       - cp ../dist/index.html ../dist/404.html
+      - echo "www.capsulecd.com" > ../CNAME
       - cd ../dist && git init && git add . && git commit -m "Deploy"
       - cd ../dist && git remote add origin remote git@github.com:AnalogJ/capsulecd-web.git
       - cd ../dist && git push --force origin master:gh-pages
