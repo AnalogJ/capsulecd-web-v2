@@ -20,7 +20,7 @@ test:
     - ng github-pages:deploy --message "Autodeploy gh-pages" --base-href "/"
 
 deployment:
-  # the following command deploys to www.capsulecd.com domain.
+  # the following command deploys to www.capsulecd.com domain if the change is made on the master branch.
   production:
     branch: master
     commands:
@@ -29,7 +29,7 @@ deployment:
       - ls /
       - ng build --prod --output-path ../dist --base-href "/"
       - cp ../dist/index.html ../dist/404.html
-      - echo "www.capsulecd.com" > ../CNAME
+      - echo "www.capsulecd.com" > ../dist/CNAME
       - cd ../dist && git init && git add . && git commit -m "Deploy"
       - cd ../dist && git remote add origin git@github.com:AnalogJ/capsulecd-web.git
       - cd ../dist && git push --force origin master:gh-pages
