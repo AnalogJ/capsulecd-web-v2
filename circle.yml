@@ -6,6 +6,7 @@ general:
   branches:
     only:
       - master
+      - beta
 
 dependencies:
   override:
@@ -21,7 +22,7 @@ test:
 deployment:
   # the following command deploys to www.capsulecd.com domain.
   production:
-    branch: production
+    branch: master
     commands:
       - ls
       - pwd
