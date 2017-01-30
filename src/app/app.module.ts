@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
-import { Ng2BootstrapModule } from 'ng2-bootstrap';
+import { ModalModule } from 'ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './partials/footer/footer.component';
@@ -52,7 +52,7 @@ export function getAuthHttp(http: any) {
     BrowserModule,
     FormsModule,
     HttpModule,
-    Ng2BootstrapModule,
+    ModalModule.forRoot(),
     MomentModule,
     InfiniteScrollModule,
     RouterModule.forRoot([
