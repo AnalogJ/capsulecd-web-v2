@@ -15,6 +15,9 @@ dependencies:
     - npm install
     - npm ls
 
+test:
+  override:
+    - echo "skipped, do nothing."
 
 
 deployment:
