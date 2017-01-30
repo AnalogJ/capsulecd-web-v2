@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 
-import { ModalDirective } from 'ng2-bootstrap/ng2-bootstrap';
+import { ModalDirective } from 'ng2-bootstrap';
 
 @Component({
   selector: 'app-auth-connect',
@@ -14,7 +14,7 @@ export class AuthConnectComponent implements AfterViewInit {
   loading = {
     github: false,
     bitbucket: false
-  }
+  };
 
   constructor(private apiService: ApiService) { }
 
@@ -23,8 +23,8 @@ export class AuthConnectComponent implements AfterViewInit {
   }
 
   loginWith(serviceType){
-    console.log(serviceType)
-    this.loading[serviceType] = true
+    console.log(serviceType);
+    this.loading[serviceType] = true;
 
     this.apiService.authConnect(serviceType)
         .subscribe(

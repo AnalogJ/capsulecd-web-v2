@@ -1,4 +1,4 @@
 export class Repository {
-    name: string
+    name: string;
     updated_at: string
 }

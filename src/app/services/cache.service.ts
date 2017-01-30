@@ -15,16 +15,16 @@ export class CacheService {
   }
 
   put(cacheKey:string, observable:Observable<any>): ReplaySubject<any> {
-    let currentSubject = this.get(cacheKey)
+    let currentSubject = this.get(cacheKey);
     if(!currentSubject){
       this._cache[cacheKey] = new ReplaySubject<any>(1);
-      currentSubject = this._cache[cacheKey] //if the current cacheKey doesn't exist in the cache, lets ensure that we create it.
+      currentSubject = this._cache[cacheKey]; //if the current cacheKey doesn't exist in the cache, lets ensure that we create it.
     }
     observable.subscribe(
         data => currentSubject.next(data),
         error => currentSubject.error(error),
         () => currentSubject.complete()
-    )
+    );
     return currentSubject;
   }
   delete(cacheKey:string){

@@ -54,8 +54,8 @@ export class ApiService {
       for(var key in queryParams){
         var value = queryParams[key];
       params.set(key, value)
-    };
-    console.log(params)
+      }
+      console.log(params);
 
     return this.http.get(`${AppSettings.API_ENDPOINT}/callback/${serviceType}`, {
       search: params
@@ -67,7 +67,7 @@ export class ApiService {
 
   fetchDockerImage(dockerImage): Observable<any>{
     let params: URLSearchParams = new URLSearchParams();
-    params.set('query', dockerImage)
+    params.set('query', dockerImage);
 
     return this.http.get(`//crossorigin.me/https://cloud.docker.com/v2/search/repositories/`, {
       search: params
@@ -82,7 +82,7 @@ export class ApiService {
   // Authenticated functions
 
   getProjects(): Observable<any> {
-    var url = `${AppSettings.API_ENDPOINT}/project`
+    var url = `${AppSettings.API_ENDPOINT}/project`;
     var cacheKey = this.cacheKey('GET', url);
     return this.cacheService.get(cacheKey) || this.cacheService.put(cacheKey, this.authHttp.get(url)
           .map(this.extractData)
@@ -90,7 +90,7 @@ export class ApiService {
   }
 
   getProject(orgId:string, repoId:string): Observable<any> {
-    var url = `${AppSettings.API_ENDPOINT}/project/${this.serviceType()}/${orgId}/${repoId}`
+    var url = `${AppSettings.API_ENDPOINT}/project/${this.serviceType()}/${orgId}/${repoId}`;
     var cacheKey = this.cacheKey('GET', url);
     return this.cacheService.get(cacheKey) || this.cacheService.put(cacheKey, this.authHttp.get(url)
           .map(this.extractData)
@@ -143,8 +143,8 @@ export class ApiService {
 
   fetchOrgRepos(orgId:string, page?:number): Observable<any>{
     let params: URLSearchParams = new URLSearchParams();
-    params.set('page', (page || 0).toString())
-    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.serviceType()}/orgs/${orgId}/repos`
+    params.set('page', (page || 0).toString());
+    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.serviceType()}/orgs/${orgId}/repos`;
 
     var cacheKey = this.cacheKey('GET', url, params);
     return this.cacheService.get(cacheKey) || this.cacheService.put(cacheKey, this.authHttp.get(url,{ search: params })
@@ -155,8 +155,8 @@ export class ApiService {
 
   fetchOrgRepoPullRequests(orgId:string, repoId:string, page?:number): Observable<any>{
     let params: URLSearchParams = new URLSearchParams();
-    params.set('page', (page || 0).toString())
-    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.serviceType()}/orgs/${orgId}/repos/${repoId}/pullrequests`
+    params.set('page', (page || 0).toString());
+    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.serviceType()}/orgs/${orgId}/repos/${repoId}/pullrequests`;
 
     var cacheKey = this.cacheKey('GET', url, params);
     return this.cacheService.get(cacheKey) || this.cacheService.put(cacheKey, this.authHttp.get(url,{ search: params })
@@ -165,7 +165,7 @@ export class ApiService {
   }
 
   fetchOrgRepoPullRequest(orgId:string, repoId:string, prNumber:number): Observable<any>{
-    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.serviceType()}/orgs/${orgId}/repos/${repoId}/pullrequests/${prNumber}`
+    var url = `${AppSettings.API_ENDPOINT}/fetch/${this.serviceType()}/orgs/${orgId}/repos/${repoId}/pullrequests/${prNumber}`;
 
     var cacheKey = this.cacheKey('GET', url);
     return this.cacheService.get(cacheKey) || this.cacheService.put(cacheKey, this.authHttp.get(url)

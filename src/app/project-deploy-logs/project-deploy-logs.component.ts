@@ -51,7 +51,7 @@ export class ProjectDeployLogsComponent implements OnInit {
                 }
               },
               error => {
-                this.alerts.push(new Alert('Error retrieving project', error.message))
+                this.alerts.push(new Alert('Error retrieving project', error.message));
                 this.logSubscription.unsubscribe();
               },
               () => {
@@ -66,7 +66,7 @@ export class ProjectDeployLogsComponent implements OnInit {
     this.apiService.getProject(this.orgId, this.repoId)
         .subscribe(
             data => {
-              console.log(data)
+              console.log(data);
               this.projectData = data.Settings || this.projectData;
             },
             error => this.alerts.push(new Alert('Error retrieving project', error.message)),
@@ -76,7 +76,7 @@ export class ProjectDeployLogsComponent implements OnInit {
     this.apiService.fetchOrgRepoPullRequest(this.orgId, this.repoId, this.prNumber)
         .subscribe(
             data => {
-              console.log(data)
+              console.log(data);
               this.pullRequest = data
             },
             error => this.alerts.push(new Alert('Error retrieving pull request', error.message)),

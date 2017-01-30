@@ -15,10 +15,10 @@ export class ProjectEditComponent implements OnInit {
   orgId: string;
   projectData: any = {};
   projectSecrets: any = {};
-  projectSecretsKeys: any = []
+  projectSecretsKeys: any = [];
 
   defaultSettings = AppSettings.DOCKER_IMAGES;
-  defaultSettingsKeys = Object.keys(this.defaultSettings)
+  defaultSettingsKeys = Object.keys(this.defaultSettings);
 
   secretName: string = '';
   secretValue: string = '';
@@ -29,7 +29,7 @@ export class ProjectEditComponent implements OnInit {
     saveSettings: false,
     addSecret: false,
     queryDockerImages: false
-  }
+  };
   dockerImagesDatasource:Observable<any>;
   dockerImagesNoResults: boolean = false;
 
@@ -41,7 +41,7 @@ export class ProjectEditComponent implements OnInit {
     this.apiService.getProject(this.orgId, this.repoId)
         .subscribe(
             data => {
-              console.log(data)
+              console.log(data);
               this.projectData = data.Settings || this.projectData;
               this.projectSecrets = data.Secrets || this.projectSecrets;
               this.projectSecretsKeys = Object.keys(this.projectSecrets)
@@ -78,7 +78,7 @@ export class ProjectEditComponent implements OnInit {
     var payload = {
       "Settings": this.projectData
     };
-    this.loading.saveSettings = true
+    this.loading.saveSettings = true;
     this.apiService.editProject(this.orgId, this.repoId, payload)
         .subscribe(
             data => {
@@ -98,8 +98,8 @@ export class ProjectEditComponent implements OnInit {
     this.apiService.editProject(this.orgId, this.repoId, payload)
         .subscribe(
             data => {
-              this.projectSecrets[this.secretName] = {last4:(this.secretValue.length > 4) ? this.secretValue.substr(this.secretValue.length - 4) : this.secretValue.substr(this.secretValue.length - 2)}
-              this.projectSecretsKeys = Object.keys(this.projectSecrets)
+              this.projectSecrets[this.secretName] = {last4:(this.secretValue.length > 4) ? this.secretValue.substr(this.secretValue.length - 4) : this.secretValue.substr(this.secretValue.length - 2)};
+              this.projectSecretsKeys = Object.keys(this.projectSecrets);
               this.secretName = '';
               this.secretValue = '';
             },
