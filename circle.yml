@@ -15,12 +15,15 @@ dependencies:
     - npm install
     - npm ls
 
-test:
-  override:
-    #the following commands deploy to the beta.capsulecd.com domain.
-    - ng github-pages:deploy --message "Autodeploy gh-pages" --base-href "/" --target dev
+
 
 deployment:
+  #the following commands deploy to the beta.capsulecd.com domain.
+  beta:
+    branch: beta
+    commands:
+      - ng github-pages:deploy --message "Autodeploy gh-pages" --base-href "/" --dev
+
   # the following command deploys to www.capsulecd.com domain if the change is made on the master branch.
   production:
     branch: master
