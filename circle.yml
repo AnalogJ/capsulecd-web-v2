@@ -18,7 +18,7 @@ dependencies:
 test:
   override:
     #the following commands deploy to the beta.capsulecd.com domain.
-    - ng github-pages:deploy --message "Autodeploy gh-pages" --base-href "/" --target development
+    - ng github-pages:deploy --message "Autodeploy gh-pages" --base-href "/" --target dev
 
 deployment:
   # the following command deploys to www.capsulecd.com domain if the change is made on the master branch.
@@ -28,7 +28,7 @@ deployment:
       - ls
       - pwd
       - ls /
-      - ng build --prod --output-path ../dist --base-href "/"
+      - ng build --prod --sourcemap --output-path ../dist --base-href "/"
       - cp ../dist/angular.html ../dist/404.html
       - echo "www.capsulecd.com" > ../dist/CNAME
       - cd ../dist && git init && git add . && git commit -m "Deploy"
