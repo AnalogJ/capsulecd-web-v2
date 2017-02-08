@@ -60,7 +60,6 @@
       "project": "e2e/tsconfig.json"
     }
   ],
-
   "test": {
     "karma": {
       "config": "./karma.conf.js"
