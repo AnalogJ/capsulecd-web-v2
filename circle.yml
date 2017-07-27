@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 4.2.6
+    version: 6.1.0
 
 general:
   branches:
@@ -11,9 +11,10 @@ general:
 dependencies:
   override:
     - npm install npm@latest -g
-    - npm install angular-cli@1.0.0-beta.26 -g
+    - npm install @angular/cli@latest -g
+    - npm install -g angular-cli-ghpages@v0.5.0
     - npm install
-    - npm ls
+#    - npm ls
 
 test:
   override:
@@ -25,7 +26,10 @@ deployment:
   beta:
     branch: beta
     commands:
-      - ng github-pages:deploy --message "Autodeploy gh-pages" --base-href "/" --dev
+      - ng build --base-href "/" --dev
+      - cp dist/angular.html dist/404.html
+      - angular-cli-ghpages --message "Autodeploy to gh-pages" --no-silent --name "Jason Kulatunga" --email "jason@thesparktree.com"
+
 
   # the following command deploys to www.capsulecd.com domain if the change is made on the master branch.
   production:
