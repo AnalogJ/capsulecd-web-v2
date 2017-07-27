@@ -63,7 +63,7 @@ export class ProjectEditComponent implements OnInit {
     this.alerts.splice(i, 1);
   }
 
-  packageTypeChanged(){
+  packageTypeChanged(e){
     this.projectData.dockerImage = this.defaultSettings[this.projectData.packageType].image
   }
 
