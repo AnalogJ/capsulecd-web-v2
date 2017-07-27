@@ -29,8 +29,8 @@
                   <li><span class="text-strong">Repository:</span> {{orgId + '/' + repoId}}</li>
                   <li><span class="text-strong">Pull Request:</span> {{prNumber}}</li>
                   <li><span class="text-strong">Status:</span> {{containerState.Status}} <span *ngIf="!containerState.Running">({{containerState.ExitCode}})</span></li>
-                  <li><span class="text-strong">Started:</span> {{containerState.StartedAt | amTimeAgo}}</li>
-                  <li *ngIf="!containerState.Running"><span class="text-strong">Duration:</span> {{containerState.FinishedAt | amDifference: containerState.StartedAt :'minutes'}} minutes</li>
+                  <li><span class="text-strong">Started:</span> {{containerState.StartedAt}}</li>
+                  <li *ngIf="!containerState.Running"><span class="text-strong">Duration:</span> {{containerState.FinishedAt}} minutes</li>
               </ul>
           </div>
         </div>
