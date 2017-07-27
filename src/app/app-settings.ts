@@ -17,10 +17,10 @@ export class AppSettings {
                 image: 'analogj/capsulecd:chef',
                 recommendedSecrets:['CAPSULE_CHEF_SUPERMARKET_USERNAME','CAPSULE_CHEF_SUPERMARKET_KEY', 'CAPSULE_CHEF_SUPERMARKET_TYPE']
             },
-            'javascript': {
-                display: 'Javascript (Bower + Npm)',
-                image: 'analogj/capsulecd:javascript',
-                recommendedSecrets:['CAPSULE_NPM_AUTH_TOKEN']
+            'golang': {
+                display: 'Golang',
+                image: 'analogj/capsulecd:golang',
+                recommendedSecrets:[]
             },
             'node': {
                 display: 'Node',
