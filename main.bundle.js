@@ -1,14 +1,14 @@
 webpackJsonp([1,4],{
 
-/***/ 1025:
+/***/ 1029:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(786);
+module.exports = __webpack_require__(789);
 
 
 /***/ }),
 
-/***/ 150:
+/***/ 151:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37,42 +37,42 @@ var Alert = (function () {
 
 /***/ }),
 
-/***/ 238:
+/***/ 239:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(310);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(303);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(305);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(304);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(302);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(309);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(298);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(307);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(300);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(308);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(306);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(311);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(483);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(486);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
 
 
@@ -108,11 +108,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 569:
+/***/ 572:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment__ = __webpack_require__(571);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment__ = __webpack_require__(574);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSettings; });
 
 var AppSettings = (function () {
@@ -129,8 +129,8 @@ var AppSettings = (function () {
         // public static get API_ENDPOINT(): string { return 'https://api.capsulecd.com/' + AppSettings.API_VERSION; }
         get: function () {
             return {
-                'default': {
-                    display: 'Custom',
+                'generic': {
+                    display: 'Generic',
                     image: 'analogj/capsulecd',
                     recommendedSecrets: []
                 },
@@ -170,11 +170,11 @@ var AppSettings = (function () {
 
 /***/ }),
 
-/***/ 570:
+/***/ 573:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_ReplaySubject__ = __webpack_require__(966);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_ReplaySubject__ = __webpack_require__(970);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_ReplaySubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_ReplaySubject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CacheService; });
@@ -219,7 +219,7 @@ var CacheService = (function () {
 
 /***/ }),
 
-/***/ 571:
+/***/ 574:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -236,16 +236,16 @@ var environment = {
 
 /***/ }),
 
-/***/ 69:
+/***/ 70:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_jwt__ = __webpack_require__(572);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_jwt__ = __webpack_require__(575);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_jwt__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_settings__ = __webpack_require__(569);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_cache_service__ = __webpack_require__(570);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_settings__ = __webpack_require__(572);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_cache_service__ = __webpack_require__(573);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -415,7 +415,7 @@ var ApiService = (function () {
 
 /***/ }),
 
-/***/ 785:
+/***/ 788:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -424,21 +424,21 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 785;
+webpackEmptyContext.id = 788;
 
 
 /***/ }),
 
-/***/ 786:
+/***/ 789:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(238);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(872);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(875);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(571);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app_module__ = __webpack_require__(903);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(574);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app_module__ = __webpack_require__(906);
 
 
 
@@ -452,12 +452,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 902:
+/***/ 905:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rxjs_operators__ = __webpack_require__(914);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rxjs_operators__ = __webpack_require__(917);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -479,8 +479,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(956),
-            styles: [__webpack_require__(947)]
+            template: __webpack_require__(960),
+            styles: [__webpack_require__(951)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]) === 'function' && _a) || Object])
     ], AppComponent);
@@ -491,34 +491,34 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 903:
+/***/ 906:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_bootstrap__ = __webpack_require__(455);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(902);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__partials_footer_footer_component__ = __webpack_require__(909);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__ = __webpack_require__(906);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__project_create_project_create_component__ = __webpack_require__(910);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__project_edit_project_edit_component__ = __webpack_require__(913);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__project_deploy_project_deploy_component__ = __webpack_require__(912);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__auth_connect_auth_connect_component__ = __webpack_require__(905);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__auth_callback_auth_callback_component__ = __webpack_require__(904);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_api_service__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_cache_service__ = __webpack_require__(570);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_auth_guard_service__ = __webpack_require__(915);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angular2_jwt__ = __webpack_require__(572);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_bootstrap__ = __webpack_require__(458);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(905);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__partials_footer_footer_component__ = __webpack_require__(912);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__ = __webpack_require__(909);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__project_create_project_create_component__ = __webpack_require__(913);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__project_edit_project_edit_component__ = __webpack_require__(916);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__project_deploy_project_deploy_component__ = __webpack_require__(915);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__auth_connect_auth_connect_component__ = __webpack_require__(908);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__auth_callback_auth_callback_component__ = __webpack_require__(907);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_api_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_cache_service__ = __webpack_require__(573);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_auth_guard_service__ = __webpack_require__(918);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angular2_jwt__ = __webpack_require__(575);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_angular2_jwt__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_angular2_moment__ = __webpack_require__(918);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_angular2_moment__ = __webpack_require__(922);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_angular2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18_angular2_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_angular2_infinite_scroll__ = __webpack_require__(916);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_angular2_infinite_scroll__ = __webpack_require__(919);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_angular2_infinite_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_angular2_infinite_scroll__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__project_deploy_logs_project_deploy_logs_component__ = __webpack_require__(911);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__project_deploy_logs_project_deploy_logs_component__ = __webpack_require__(914);
 /* unused harmony export getAuthHttp */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -616,14 +616,14 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 904:
+/***/ 907:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_bootstrap__ = __webpack_require__(455);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_bootstrap__ = __webpack_require__(458);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthCallbackComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -668,8 +668,8 @@ var AuthCallbackComponent = (function () {
     AuthCallbackComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-auth-callback',
-            template: __webpack_require__(957),
-            styles: [__webpack_require__(948)]
+            template: __webpack_require__(961),
+            styles: [__webpack_require__(952)]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _d) || Object])
     ], AuthCallbackComponent);
@@ -680,13 +680,13 @@ var AuthCallbackComponent = (function () {
 
 /***/ }),
 
-/***/ 905:
+/***/ 908:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_bootstrap__ = __webpack_require__(455);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_bootstrap__ = __webpack_require__(458);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthConnectComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -728,8 +728,8 @@ var AuthConnectComponent = (function () {
     AuthConnectComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-auth-connect',
-            template: __webpack_require__(958),
-            styles: [__webpack_require__(949)]
+            template: __webpack_require__(962),
+            styles: [__webpack_require__(953)]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === 'function' && _b) || Object])
     ], AuthConnectComponent);
@@ -740,15 +740,15 @@ var AuthConnectComponent = (function () {
 
 /***/ }),
 
-/***/ 906:
+/***/ 909:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_project__ = __webpack_require__(908);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_alert__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_project__ = __webpack_require__(911);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_alert__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -809,8 +809,8 @@ var DashboardComponent = (function () {
     DashboardComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-dashboard',
-            template: __webpack_require__(959),
-            styles: [__webpack_require__(950)]
+            template: __webpack_require__(963),
+            styles: [__webpack_require__(954)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
     ], DashboardComponent);
@@ -821,7 +821,7 @@ var DashboardComponent = (function () {
 
 /***/ }),
 
-/***/ 907:
+/***/ 910:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -837,7 +837,7 @@ var ContainerState = (function () {
 
 /***/ }),
 
-/***/ 908:
+/***/ 911:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -851,7 +851,7 @@ var Project = (function () {
 
 /***/ }),
 
-/***/ 909:
+/***/ 912:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -875,8 +875,8 @@ var FooterComponent = (function () {
     FooterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'capsule-footer',
-            template: __webpack_require__(960),
-            styles: [__webpack_require__(951)]
+            template: __webpack_require__(964),
+            styles: [__webpack_require__(955)]
         }), 
         __metadata('design:paramtypes', [])
     ], FooterComponent);
@@ -886,14 +886,14 @@ var FooterComponent = (function () {
 
 /***/ }),
 
-/***/ 910:
+/***/ 913:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_alert__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_alert__ = __webpack_require__(151);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectCreateComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -996,8 +996,8 @@ var ProjectCreateComponent = (function () {
     ProjectCreateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-project-create',
-            template: __webpack_require__(961),
-            styles: [__webpack_require__(952)]
+            template: __webpack_require__(965),
+            styles: [__webpack_require__(956)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
     ], ProjectCreateComponent);
@@ -1008,17 +1008,17 @@ var ProjectCreateComponent = (function () {
 
 /***/ }),
 
-/***/ 911:
+/***/ 914:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_alert__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_TimerObservable__ = __webpack_require__(472);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_alert__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_TimerObservable__ = __webpack_require__(475);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_TimerObservable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_TimerObservable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_container_state__ = __webpack_require__(907);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_container_state__ = __webpack_require__(910);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectDeployLogsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1095,8 +1095,8 @@ var ProjectDeployLogsComponent = (function () {
     ProjectDeployLogsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-project-deploy-logs',
-            template: __webpack_require__(962),
-            styles: [__webpack_require__(953)]
+            template: __webpack_require__(966),
+            styles: [__webpack_require__(957)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */]) === 'function' && _b) || Object])
     ], ProjectDeployLogsComponent);
@@ -1107,14 +1107,14 @@ var ProjectDeployLogsComponent = (function () {
 
 /***/ }),
 
-/***/ 912:
+/***/ 915:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_alert__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_alert__ = __webpack_require__(151);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectDeployComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1178,8 +1178,8 @@ var ProjectDeployComponent = (function () {
     ProjectDeployComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-project-deploy',
-            template: __webpack_require__(963),
-            styles: [__webpack_require__(954)]
+            template: __webpack_require__(967),
+            styles: [__webpack_require__(958)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object])
     ], ProjectDeployComponent);
@@ -1190,17 +1190,17 @@ var ProjectDeployComponent = (function () {
 
 /***/ }),
 
-/***/ 913:
+/***/ 916:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_settings__ = __webpack_require__(569);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_settings__ = __webpack_require__(572);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_alert__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_alert__ = __webpack_require__(151);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectEditComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1297,8 +1297,8 @@ var ProjectEditComponent = (function () {
     ProjectEditComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-project-edit',
-            template: __webpack_require__(964),
-            styles: [__webpack_require__(955)]
+            template: __webpack_require__(968),
+            styles: [__webpack_require__(959)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */]) === 'function' && _b) || Object])
     ], ProjectEditComponent);
@@ -1309,25 +1309,25 @@ var ProjectEditComponent = (function () {
 
 /***/ }),
 
-/***/ 914:
+/***/ 917:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_observable_throw__ = __webpack_require__(971);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_observable_throw__ = __webpack_require__(975);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_observable_throw__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_catch__ = __webpack_require__(973);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_catch__ = __webpack_require__(977);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_debounceTime__ = __webpack_require__(760);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_debounceTime__ = __webpack_require__(763);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_debounceTime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(976);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(980);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_distinctUntilChanged__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(761);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(764);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__ = __webpack_require__(977);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__ = __webpack_require__(981);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_toPromise__ = __webpack_require__(980);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_toPromise__ = __webpack_require__(984);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_observable_TimerObservable__ = __webpack_require__(472);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_observable_TimerObservable__ = __webpack_require__(475);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_observable_TimerObservable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_observable_TimerObservable__);
 // import 'rxjs/Rx'; // adds ALL RxJS statics & operators to Observable
 
@@ -1342,13 +1342,13 @@ var ProjectEditComponent = (function () {
 
 /***/ }),
 
-/***/ 915:
+/***/ 918:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api_service__ = __webpack_require__(70);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
 // auth-guard.service.ts
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1388,240 +1388,240 @@ var AuthGuard = (function () {
 
 /***/ }),
 
-/***/ 925:
+/***/ 929:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 589,
-	"./af.js": 589,
-	"./ar": 596,
-	"./ar-dz": 590,
-	"./ar-dz.js": 590,
-	"./ar-kw": 591,
-	"./ar-kw.js": 591,
-	"./ar-ly": 592,
-	"./ar-ly.js": 592,
-	"./ar-ma": 593,
-	"./ar-ma.js": 593,
-	"./ar-sa": 594,
-	"./ar-sa.js": 594,
-	"./ar-tn": 595,
-	"./ar-tn.js": 595,
-	"./ar.js": 596,
-	"./az": 597,
-	"./az.js": 597,
-	"./be": 598,
-	"./be.js": 598,
-	"./bg": 599,
-	"./bg.js": 599,
-	"./bn": 600,
-	"./bn.js": 600,
-	"./bo": 601,
-	"./bo.js": 601,
-	"./br": 602,
-	"./br.js": 602,
-	"./bs": 603,
-	"./bs.js": 603,
-	"./ca": 604,
-	"./ca.js": 604,
-	"./cs": 605,
-	"./cs.js": 605,
-	"./cv": 606,
-	"./cv.js": 606,
-	"./cy": 607,
-	"./cy.js": 607,
-	"./da": 608,
-	"./da.js": 608,
-	"./de": 611,
-	"./de-at": 609,
-	"./de-at.js": 609,
-	"./de-ch": 610,
-	"./de-ch.js": 610,
-	"./de.js": 611,
-	"./dv": 612,
-	"./dv.js": 612,
-	"./el": 613,
-	"./el.js": 613,
-	"./en-au": 614,
-	"./en-au.js": 614,
-	"./en-ca": 615,
-	"./en-ca.js": 615,
-	"./en-gb": 616,
-	"./en-gb.js": 616,
-	"./en-ie": 617,
-	"./en-ie.js": 617,
-	"./en-nz": 618,
-	"./en-nz.js": 618,
-	"./eo": 619,
-	"./eo.js": 619,
-	"./es": 621,
-	"./es-do": 620,
-	"./es-do.js": 620,
-	"./es.js": 621,
-	"./et": 622,
-	"./et.js": 622,
-	"./eu": 623,
-	"./eu.js": 623,
-	"./fa": 624,
-	"./fa.js": 624,
-	"./fi": 625,
-	"./fi.js": 625,
-	"./fo": 626,
-	"./fo.js": 626,
-	"./fr": 629,
-	"./fr-ca": 627,
-	"./fr-ca.js": 627,
-	"./fr-ch": 628,
-	"./fr-ch.js": 628,
-	"./fr.js": 629,
-	"./fy": 630,
-	"./fy.js": 630,
-	"./gd": 631,
-	"./gd.js": 631,
-	"./gl": 632,
-	"./gl.js": 632,
-	"./gom-latn": 633,
-	"./gom-latn.js": 633,
-	"./he": 634,
-	"./he.js": 634,
-	"./hi": 635,
-	"./hi.js": 635,
-	"./hr": 636,
-	"./hr.js": 636,
-	"./hu": 637,
-	"./hu.js": 637,
-	"./hy-am": 638,
-	"./hy-am.js": 638,
-	"./id": 639,
-	"./id.js": 639,
-	"./is": 640,
-	"./is.js": 640,
-	"./it": 641,
-	"./it.js": 641,
-	"./ja": 642,
-	"./ja.js": 642,
-	"./jv": 643,
-	"./jv.js": 643,
-	"./ka": 644,
-	"./ka.js": 644,
-	"./kk": 645,
-	"./kk.js": 645,
-	"./km": 646,
-	"./km.js": 646,
-	"./kn": 647,
-	"./kn.js": 647,
-	"./ko": 648,
-	"./ko.js": 648,
-	"./ky": 649,
-	"./ky.js": 649,
-	"./lb": 650,
-	"./lb.js": 650,
-	"./lo": 651,
-	"./lo.js": 651,
-	"./lt": 652,
-	"./lt.js": 652,
-	"./lv": 653,
-	"./lv.js": 653,
-	"./me": 654,
-	"./me.js": 654,
-	"./mi": 655,
-	"./mi.js": 655,
-	"./mk": 656,
-	"./mk.js": 656,
-	"./ml": 657,
-	"./ml.js": 657,
-	"./mr": 658,
-	"./mr.js": 658,
-	"./ms": 660,
-	"./ms-my": 659,
-	"./ms-my.js": 659,
-	"./ms.js": 660,
-	"./my": 661,
-	"./my.js": 661,
-	"./nb": 662,
-	"./nb.js": 662,
-	"./ne": 663,
-	"./ne.js": 663,
-	"./nl": 665,
-	"./nl-be": 664,
-	"./nl-be.js": 664,
-	"./nl.js": 665,
-	"./nn": 666,
-	"./nn.js": 666,
-	"./pa-in": 667,
-	"./pa-in.js": 667,
-	"./pl": 668,
-	"./pl.js": 668,
-	"./pt": 670,
-	"./pt-br": 669,
-	"./pt-br.js": 669,
-	"./pt.js": 670,
-	"./ro": 671,
-	"./ro.js": 671,
-	"./ru": 672,
-	"./ru.js": 672,
-	"./sd": 673,
-	"./sd.js": 673,
-	"./se": 674,
-	"./se.js": 674,
-	"./si": 675,
-	"./si.js": 675,
-	"./sk": 676,
-	"./sk.js": 676,
-	"./sl": 677,
-	"./sl.js": 677,
-	"./sq": 678,
-	"./sq.js": 678,
-	"./sr": 680,
-	"./sr-cyrl": 679,
-	"./sr-cyrl.js": 679,
-	"./sr.js": 680,
-	"./ss": 681,
-	"./ss.js": 681,
-	"./sv": 682,
-	"./sv.js": 682,
-	"./sw": 683,
-	"./sw.js": 683,
-	"./ta": 684,
-	"./ta.js": 684,
-	"./te": 685,
-	"./te.js": 685,
-	"./tet": 686,
-	"./tet.js": 686,
-	"./th": 687,
-	"./th.js": 687,
-	"./tl-ph": 688,
-	"./tl-ph.js": 688,
-	"./tlh": 689,
-	"./tlh.js": 689,
-	"./tr": 690,
-	"./tr.js": 690,
-	"./tzl": 691,
-	"./tzl.js": 691,
-	"./tzm": 693,
-	"./tzm-latn": 692,
-	"./tzm-latn.js": 692,
-	"./tzm.js": 693,
-	"./uk": 694,
-	"./uk.js": 694,
-	"./ur": 695,
-	"./ur.js": 695,
-	"./uz": 697,
-	"./uz-latn": 696,
-	"./uz-latn.js": 696,
-	"./uz.js": 697,
-	"./vi": 698,
-	"./vi.js": 698,
-	"./x-pseudo": 699,
-	"./x-pseudo.js": 699,
-	"./yo": 700,
-	"./yo.js": 700,
-	"./zh-cn": 701,
-	"./zh-cn.js": 701,
-	"./zh-hk": 702,
-	"./zh-hk.js": 702,
-	"./zh-tw": 703,
-	"./zh-tw.js": 703
+	"./af": 592,
+	"./af.js": 592,
+	"./ar": 599,
+	"./ar-dz": 593,
+	"./ar-dz.js": 593,
+	"./ar-kw": 594,
+	"./ar-kw.js": 594,
+	"./ar-ly": 595,
+	"./ar-ly.js": 595,
+	"./ar-ma": 596,
+	"./ar-ma.js": 596,
+	"./ar-sa": 597,
+	"./ar-sa.js": 597,
+	"./ar-tn": 598,
+	"./ar-tn.js": 598,
+	"./ar.js": 599,
+	"./az": 600,
+	"./az.js": 600,
+	"./be": 601,
+	"./be.js": 601,
+	"./bg": 602,
+	"./bg.js": 602,
+	"./bn": 603,
+	"./bn.js": 603,
+	"./bo": 604,
+	"./bo.js": 604,
+	"./br": 605,
+	"./br.js": 605,
+	"./bs": 606,
+	"./bs.js": 606,
+	"./ca": 607,
+	"./ca.js": 607,
+	"./cs": 608,
+	"./cs.js": 608,
+	"./cv": 609,
+	"./cv.js": 609,
+	"./cy": 610,
+	"./cy.js": 610,
+	"./da": 611,
+	"./da.js": 611,
+	"./de": 614,
+	"./de-at": 612,
+	"./de-at.js": 612,
+	"./de-ch": 613,
+	"./de-ch.js": 613,
+	"./de.js": 614,
+	"./dv": 615,
+	"./dv.js": 615,
+	"./el": 616,
+	"./el.js": 616,
+	"./en-au": 617,
+	"./en-au.js": 617,
+	"./en-ca": 618,
+	"./en-ca.js": 618,
+	"./en-gb": 619,
+	"./en-gb.js": 619,
+	"./en-ie": 620,
+	"./en-ie.js": 620,
+	"./en-nz": 621,
+	"./en-nz.js": 621,
+	"./eo": 622,
+	"./eo.js": 622,
+	"./es": 624,
+	"./es-do": 623,
+	"./es-do.js": 623,
+	"./es.js": 624,
+	"./et": 625,
+	"./et.js": 625,
+	"./eu": 626,
+	"./eu.js": 626,
+	"./fa": 627,
+	"./fa.js": 627,
+	"./fi": 628,
+	"./fi.js": 628,
+	"./fo": 629,
+	"./fo.js": 629,
+	"./fr": 632,
+	"./fr-ca": 630,
+	"./fr-ca.js": 630,
+	"./fr-ch": 631,
+	"./fr-ch.js": 631,
+	"./fr.js": 632,
+	"./fy": 633,
+	"./fy.js": 633,
+	"./gd": 634,
+	"./gd.js": 634,
+	"./gl": 635,
+	"./gl.js": 635,
+	"./gom-latn": 636,
+	"./gom-latn.js": 636,
+	"./he": 637,
+	"./he.js": 637,
+	"./hi": 638,
+	"./hi.js": 638,
+	"./hr": 639,
+	"./hr.js": 639,
+	"./hu": 640,
+	"./hu.js": 640,
+	"./hy-am": 641,
+	"./hy-am.js": 641,
+	"./id": 642,
+	"./id.js": 642,
+	"./is": 643,
+	"./is.js": 643,
+	"./it": 644,
+	"./it.js": 644,
+	"./ja": 645,
+	"./ja.js": 645,
+	"./jv": 646,
+	"./jv.js": 646,
+	"./ka": 647,
+	"./ka.js": 647,
+	"./kk": 648,
+	"./kk.js": 648,
+	"./km": 649,
+	"./km.js": 649,
+	"./kn": 650,
+	"./kn.js": 650,
+	"./ko": 651,
+	"./ko.js": 651,
+	"./ky": 652,
+	"./ky.js": 652,
+	"./lb": 653,
+	"./lb.js": 653,
+	"./lo": 654,
+	"./lo.js": 654,
+	"./lt": 655,
+	"./lt.js": 655,
+	"./lv": 656,
+	"./lv.js": 656,
+	"./me": 657,
+	"./me.js": 657,
+	"./mi": 658,
+	"./mi.js": 658,
+	"./mk": 659,
+	"./mk.js": 659,
+	"./ml": 660,
+	"./ml.js": 660,
+	"./mr": 661,
+	"./mr.js": 661,
+	"./ms": 663,
+	"./ms-my": 662,
+	"./ms-my.js": 662,
+	"./ms.js": 663,
+	"./my": 664,
+	"./my.js": 664,
+	"./nb": 665,
+	"./nb.js": 665,
+	"./ne": 666,
+	"./ne.js": 666,
+	"./nl": 668,
+	"./nl-be": 667,
+	"./nl-be.js": 667,
+	"./nl.js": 668,
+	"./nn": 669,
+	"./nn.js": 669,
+	"./pa-in": 670,
+	"./pa-in.js": 670,
+	"./pl": 671,
+	"./pl.js": 671,
+	"./pt": 673,
+	"./pt-br": 672,
+	"./pt-br.js": 672,
+	"./pt.js": 673,
+	"./ro": 674,
+	"./ro.js": 674,
+	"./ru": 675,
+	"./ru.js": 675,
+	"./sd": 676,
+	"./sd.js": 676,
+	"./se": 677,
+	"./se.js": 677,
+	"./si": 678,
+	"./si.js": 678,
+	"./sk": 679,
+	"./sk.js": 679,
+	"./sl": 680,
+	"./sl.js": 680,
+	"./sq": 681,
+	"./sq.js": 681,
+	"./sr": 683,
+	"./sr-cyrl": 682,
+	"./sr-cyrl.js": 682,
+	"./sr.js": 683,
+	"./ss": 684,
+	"./ss.js": 684,
+	"./sv": 685,
+	"./sv.js": 685,
+	"./sw": 686,
+	"./sw.js": 686,
+	"./ta": 687,
+	"./ta.js": 687,
+	"./te": 688,
+	"./te.js": 688,
+	"./tet": 689,
+	"./tet.js": 689,
+	"./th": 690,
+	"./th.js": 690,
+	"./tl-ph": 691,
+	"./tl-ph.js": 691,
+	"./tlh": 692,
+	"./tlh.js": 692,
+	"./tr": 693,
+	"./tr.js": 693,
+	"./tzl": 694,
+	"./tzl.js": 694,
+	"./tzm": 696,
+	"./tzm-latn": 695,
+	"./tzm-latn.js": 695,
+	"./tzm.js": 696,
+	"./uk": 697,
+	"./uk.js": 697,
+	"./ur": 698,
+	"./ur.js": 698,
+	"./uz": 700,
+	"./uz-latn": 699,
+	"./uz-latn.js": 699,
+	"./uz.js": 700,
+	"./vi": 701,
+	"./vi.js": 701,
+	"./x-pseudo": 702,
+	"./x-pseudo.js": 702,
+	"./yo": 703,
+	"./yo.js": 703,
+	"./zh-cn": 704,
+	"./zh-cn.js": 704,
+	"./zh-hk": 705,
+	"./zh-hk.js": 705,
+	"./zh-tw": 706,
+	"./zh-tw.js": 706
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -1637,36 +1637,8 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 925;
+webpackContext.id = 929;
 
-
-/***/ }),
-
-/***/ 947:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 948:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 949:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 950:
-/***/ (function(module, exports) {
-
-module.exports = ""
 
 /***/ }),
 
@@ -1708,65 +1680,93 @@ module.exports = ""
 /***/ 956:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- HEADER -->\n<header>\n    <a href=\"/\" id=\"logo\"><img src=\"assets/logo_white_medium.png\" alt=\"\"/><img class=\"act\" src=\"assets/logo_black_medium.png\" alt=\"\"/></a>\n    <div class=\"mob-icon\">\n        <span></span>\n    </div>\n    <nav>\n        <ul>\n            <li><a routerLink=\"/dashboard\" routerLinkActive=\"act\" class=\"scroll-to-link\">Dashboard</a></li>\n            <li><a routerLink=\"/project/create\" routerLinkActive=\"act\" class=\"scroll-to-link\">Add Project</a></li>\n        </ul>\n    </nav>\n</header>\n\n\n<div id=\"content-wrapper\">\n    <!-- Routed views go here -->\n    <router-outlet></router-outlet>\n\n</div>\n\n\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 957:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"full-page-bg-wrapper\">\n  <div class=\"full-page-bg\"></div>\n</div>\n<!-- Large modal -->\n\n<div bsModal #childModal=\"bs-modal\" [config]=\"{backdrop: 'static'}\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\" style=\"border-radius:0px;\">\n\n      <div class=\"modal-body\" style=\"padding: 80px\">\n        <div class=\"page-tagline\">\n          <h2 class=\"title\" *ngIf=\"successfulCallback\">Success</h2>\n          <h2 class=\"title\" *ngIf=\"!successfulCallback\">Failure</h2>\n          <div class=\"description\">\n            You have successfully connected your account. Please wait while we redirect you.\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = ""
 
 /***/ }),
 
 /***/ 958:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"full-page-bg-wrapper\">\n  <div class=\"full-page-bg\"></div>\n</div>\n\n<!-- Large modal -->\n<div bsModal #childModal=\"bs-modal\" [config]=\"{backdrop: 'static'}\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\" style=\"border-radius:0px;\">\n\n      <div class=\"modal-body\" style=\"padding: 80px\">\n        <div class=\"page-tagline\">\n          <h2 class=\"title\">Sign Into CapsuleCD</h2>\n          <div class=\"description\">\n            If you have already authorized either GitHub or Bitbucket on your CapsuleCD account, then you can click either button to sign in.\n          </div>\n        </div>\n\n        <div style=\"text-align: center; \">\n          <a class=\"button size-2 mr-40\" (click)=\"loginWith('github')\">\n            <span>Github</span>\n            <span *ngIf=\"loading.github\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n          </a>\n          <a class=\"button size-2\" (click)=\"loginWith('bitbucket')\">\n            <span>Bitbucket</span>\n            <span *ngIf=\"loading.bitbucket\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n          </a>\n\n        </div>\n\n\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = ""
 
 /***/ }),
 
 /***/ 959:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"blocks-container\">\n\n  <div class=\"block scroll-to-block\" data-id=\"benefits\">\n    <div class=\"container\">\n      <div class=\"row page-tagline\" style=\"margin-bottom: 0px;\">\n        <div class=\"col-md-6 col-md-offset-3 wow flipInX\" data-wow-delay=\"0.3s\">\n          <h2 class=\"title\">Dashboard</h2>\n          <div class=\"description\">CapsuleCD makes publishing new version of your library simple.\n\n            Select a project, choose a PR to base your new version off of and you're all done.</div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-10 col-lg-offset-1\">\n          <alert *ngFor=\"let alert of alerts;let i = index\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert(i)\">\n            <div class=\"title\">{{ alert?.title}}</div>\n            {{ alert?.msg }}\n          </alert>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-md-3\" style=\"margin-bottom: 50px;\">\n\n          <div class=\"widget-entry\">\n            <h3 class=\"widget-title\">All Projects <span *ngIf=\"loading.projects\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n            </h3>\n            <div class=\"categories-wrapper\">\n              <span *ngFor=\"let project of projects\" class=\"entry\">\n                <a (click)=\"showProject(project)\" >\n                  <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>{{project.RepoId}}\n                  <span *ngIf=\"loading.pullrequests[project.RepoId]\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n                </a>\n                <span class=\"number\" [routerLink]=\"['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/edit' ]\"><span class=\"glyphicon glyphicon-cog\" aria-hidden=\"true\"></span></span>\n              </span>\n\n            </div>\n          </div>\n        </div>\n\n\n        <div class=\"col-md-9\">\n          <div class=\"typography-article\">\n            <h4>{{selectedProject.Id}} Pull Requests\n              <span *ngIf=\"loading.pullrequests[selectedProject.RepoId]\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n            </h4>\n          </div>\n          <div class=\"clear\"></div>\n\n          <div class=\"row\" *ngFor=\"let pullRequest of projectPullRequests\">\n\n            <div class=\"pull-request-panel panel-default panel-horizontal typography-article\">\n              <div class=\"panel-heading text-center\" style=\"width:10em;\">\n                <h3 class=\"pr-number\"><a [href]=\"pullRequest.html_url\">#{{pullRequest.number}}</a></h3>\n                <span class=\"pr-date\">{{pullRequest.updated_at | amTimeAgo}}</span>\n                <hr />\n                <div class=\"pr-user\"><a [href]=\"pullRequest.user.html_url\">@{{pullRequest.user.login}}</a></div>\n              </div>\n\n              <div class=\"panel-body\">\n\n                <!--div class=\"col-xs-2 col-md-3 text-center age\">\n                    <img src=\"https://placeholdit.imgix.net/~text?txtsize=40&txt=John%20Doe&w=200&h=200\" class=\"img-circle img-responsive\" alt=\"\" />\n                </div-->\n                <div class=\"col-xs-12 col-md-12 section-box\">\n                  <h4>{{pullRequest.title}}</h4>\n                  <pre class=\"pr-body\">{{pullRequest.body || '...'}}</pre>\n\n                  <a *ngIf=\"selectedProject.Pending[pullRequest.number]\" class=\"button black size-3 pull-right mt-15\" [routerLink]=\"['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/pullrequests/' + pullRequest.number + '/logs' ]\"><span>View Logs</span></a>\n                  <a class=\"button size-3 pull-right mt-15 mr-10\" [routerLink]=\"['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/pullrequests/' + pullRequest.number ]\"><span>Create Release</span></a>\n\n                </div>\n\n              </div>\n            </div>\n\n          </div>\n\n\n\n          <div class=\"row\" *ngIf=\"projectPullRequests.length == 0\">\n\n            <div class=\"pull-request-panel panel-default panel-horizontal typography-article\">\n              <div class=\"panel-empty text-center\" style=\"width:10em;\">\n                <h3 class=\"pr-number\"><div>No Pull Requests Found</div></h3>\n                <p>Try selecting a different project</p>\n              </div>\n\n            </div>\n\n          </div>\n\n\n\n        </div>\n\n\n\n\n      </div>\n    </div>\n  </div>\n\n\n  <capsule-footer></capsule-footer>\n\n\n</div>"
+module.exports = ""
 
 /***/ }),
 
 /***/ 960:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- FOOTER -->\n<footer>\n\n  <div class=\"footer-bottom\">\n    <div class=\"footer-linck\">\n      <a href=\"http://www.capsulecd.com\">Home</a>\n      <a href=\"#\">Privacy Policy</a>\n      <a href=\"http://blog.thesparktree.com\">Blog</a>\n    </div>\n    <div class=\"media-icon\">\n      <a href=\"http://ca.linkedin.com/pub/jason-kulatunga/11/382/337\"><img src=\"assets/img/social-icons/linkedin.png\" alt=\"\"/></a>\n      <a href=\"#\"><img src=\"assets/img/social-icons/googleplus.png\" alt=\"\"/></a>\n      <a href=\"http://twitter.com/analogj\"><img src=\"assets/img/social-icons/twitter.png\" alt=\"\"/></a>\n    </div>\n    <div class=\"copy\">\n      <span>© 2016 All rights reserved. CapsuleCD</span>\n    </div>\n  </div>\n  <div class=\"back-to-top\"><i class=\"fa fa-chevron-up\"></i></div>\n</footer>"
+module.exports = "<!-- HEADER -->\n<header>\n    <a href=\"/\" id=\"logo\"><img src=\"assets/logo_white_medium.png\" alt=\"\"/><img class=\"act\" src=\"assets/logo_black_medium.png\" alt=\"\"/></a>\n    <div class=\"mob-icon\">\n        <span></span>\n    </div>\n    <nav>\n        <ul>\n            <li><a routerLink=\"/dashboard\" routerLinkActive=\"act\" class=\"scroll-to-link\">Dashboard</a></li>\n            <li><a routerLink=\"/project/create\" routerLinkActive=\"act\" class=\"scroll-to-link\">Add Project</a></li>\n        </ul>\n    </nav>\n</header>\n\n\n<div id=\"content-wrapper\">\n    <!-- Routed views go here -->\n    <router-outlet></router-outlet>\n\n</div>\n\n\n"
 
 /***/ }),
 
 /***/ 961:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"blocks-container\">\n\n  <div class=\"block standard scroll-to-block\" data-id=\"contact\">\n    <div class=\"container\">\n      <div class=\"row page-tagline\">\n        <div class=\"col-md-6 col-md-offset-3\">\n          <h2 class=\"title\">Create Project</h2>\n          <div class=\"description\">\n            Choose an organization that you are a member of, then choose a repo to add to CapsuleCD.\n\n            We'll watch it and keep track of all new PR's opened on your repo.\n          </div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-10 col-lg-offset-1\">\n          <alert *ngFor=\"let alert of alerts;let i = index\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert(i)\">\n            <div class=\"title\">{{ alert?.title}}</div>\n            {{ alert?.msg }}\n          </alert>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-offset-2 col-lg-8\">\n          <div class=\"blog-post style-3\">\n            <div class=\"row\">\n              <div class=\"col-md-12\" *ngIf=\"orgs.length >=1\">\n                <div class=\"data\">\n                  <div class=\"date\"><span>{{orgRepos.length}}</span> repos</div>\n                  <div class=\"text\">\n                    <div class=\"author-entry\">\n                      <a class=\"author-thumbnail\"><img alt=\"\" [src]=\"orgs[selectedOrgIndex].avatar_url\" class=\"img-circle\"></a>\n                      <a class=\"title ml-20 mt-10\">{{orgs[selectedOrgIndex].login}}</a>\n                      <div class=\"clear\"></div>\n                    </div>\n\n                    <div class=\"description\">{{ orgs[selectedOrgIndex].description || orgs[selectedOrgIndex].bio }}</div>\n\n                  </div>\n                  <div class=\"clear\"></div>\n                </div>\n                <div class=\"paginator\" *ngIf=\"orgs.length > 1\">\n                  <div>\n                    <a (click)=\"selectPrevOrg(selectedOrgIndex-1)\" class=\"arrow-button\"><span aria-hidden=\"true\" class=\"glyphicon glyphicon-chevron-left\"></span> Prev Account</a>\n                    <a (click)=\"selectNextOrg(selectedOrgIndex+1)\" class=\"arrow-button\">Next Account <span aria-hidden=\"true\" class=\"glyphicon glyphicon-chevron-right\"></span></a>\n                  </div>\n                  <div class=\"clear\"></div>\n                </div>\n              </div>\n\n\n            </div>\n          </div>\n\n\n        </div>\n      </div>\n\n\n      <div class=\"row\" *ngIf=\"orgRepos.length > 0\">\n        <div class=\"col-md-8 col-md-offset-2\">\n          <div class=\"typography-article\">\n            <div class=\"table-responsive repo-table\">\n              <table class=\"table\" infinite-scroll  (scrolled)=\"fetchSelectedOrgReposNextPage()\" [infiniteScrollDisabled]=\"loading.fetchOrgRepos ||  orgReposAll\">\n                <tr>\n                  <th>Name</th>\n                  <th>Updated At</th>\n                  <th>Action</th>\n                </tr>\n                <tr *ngFor=\"let repo of orgRepos\">\n                  <td>{{repo.name}} </td>\n                  <td>{{repo.updated_at| amTimeAgo}}</td>\n                  <td>\n                    <a class=\"button size-3 type-1\" (click)=\"createProject(orgs[selectedOrgIndex].login, repo.name)\"><span>Watch Project</span></a>\n                  </td>\n                </tr>\n\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>\n\n\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <capsule-footer></capsule-footer>\n\n\n\n</div>\n\n"
+module.exports = "<div class=\"full-page-bg-wrapper\">\n  <div class=\"full-page-bg\"></div>\n</div>\n<!-- Large modal -->\n\n<div bsModal #childModal=\"bs-modal\" [config]=\"{backdrop: 'static'}\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\" style=\"border-radius:0px;\">\n\n      <div class=\"modal-body\" style=\"padding: 80px\">\n        <div class=\"page-tagline\">\n          <h2 class=\"title\" *ngIf=\"successfulCallback\">Success</h2>\n          <h2 class=\"title\" *ngIf=\"!successfulCallback\">Failure</h2>\n          <div class=\"description\">\n            You have successfully connected your account. Please wait while we redirect you.\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
 /***/ 962:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"blocks-container\">\n\n  <div class=\"block standard scroll-to-block\" data-id=\"contact\">\n    <div class=\"container\">\n      <div class=\"row page-tagline\">\n        <div class=\"col-md-6 col-md-offset-3\">\n          <h2 class=\"title\">Publish Logs</h2>\n          <div class=\"description\">\n            These logs help you track the status of your release, and provides the information necessary to determine why\n              your package was not published by Capsule.\n          </div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-10 col-lg-offset-1\">\n          <alert *ngFor=\"let alert of alerts;let i = index\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert(i)\">\n            <div class=\"title\">{{ alert?.title}}</div>\n            {{ alert?.msg }}\n          </alert>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-md-offset-1 col-md-3\">\n          <div class=\"typography-article\">\n              <h3 class=\"widget-title\">Info</h3>\n              <ul class=\"list-style-3\">\n                  <li><span class=\"text-strong\">Repository:</span> {{orgId + '/' + repoId}}</li>\n                  <li><span class=\"text-strong\">Pull Request:</span> {{prNumber}}</li>\n                  <li><span class=\"text-strong\">Status:</span> {{containerState.Status}} <span *ngIf=\"!containerState.Running\">({{containerState.ExitCode}})</span></li>\n                  <li><span class=\"text-strong\">Started:</span> {{containerState.StartedAt}}</li>\n                  <li *ngIf=\"!containerState.Running\"><span class=\"text-strong\">Duration:</span> {{containerState.FinishedAt}} minutes</li>\n              </ul>\n          </div>\n        </div>\n        <!--<div class=\"col-md-6\">-->\n          <!--<div class=\"typography-article\">-->\n            <!--<h3 class=\"widget-title\">Commits</h3>-->\n            <!--<ul class=\"list-style-3\">-->\n              <!--<li>MP3, Ogg Vorbis or AAC can be used</li>-->\n              <!--<li>48 kHz sample rate</li>-->\n              <!--<li>16 bits per sample</li>-->\n              <!--<li>2 channels for stereo audio</li>-->\n              <!--<li>Audio bitrate 128-320Kbps</li>-->\n            <!--</ul>-->\n          <!--</div>-->\n        <!--</div>-->\n\n      </div>\n\n\n      <div class=\"row\">\n        <div class=\"col-lg-offset-1 col-lg-10\">\n\n            <!--http://codepen.io/simoami/pen/zstvo-->\n            <!--http://codepen.io/jamesduncombe/pen/QNMapK-->\n            <!--http://codepen.io/sthupukari/pen/VYjGpL-->\n            <!--http://codepen.io/mahdi/pen/rOqpBJ-->\n          <div class=\"terminal-window\">\n              <div class=\"term-header\">\n                  <div class=\"term-button green\"></div>\n                  <div class=\"term-button yellow\"></div>\n                  <div class=\"term-button red\"></div>\n                  <span *ngIf=\"containerState.Running\" class=\"glyphicon glyphicon-repeat mt-5 fast-right-spinner pull-right\"></span>\n\n              </div>\n              <section class=\"terminal\">\n                  <div class=\"history\">\n                    <div *ngFor=\"let log of logs\">\n                        <span [ngClass]=\"log.stream\">{{log.line}}</span>\n                    </div>\n                  </div>\n                  $&nbsp;<span class=\"prompt\"></span>\n                  <span class=\"typed-cursor\"></span>\n\n              </section>\n          </div>\n        </div>\n      </div>\n\n\n    </div>\n  </div>\n\n  <capsule-footer></capsule-footer>\n\n\n</div>"
+module.exports = "<div class=\"full-page-bg-wrapper\">\n  <div class=\"full-page-bg\"></div>\n</div>\n\n<!-- Large modal -->\n<div bsModal #childModal=\"bs-modal\" [config]=\"{backdrop: 'static'}\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\" style=\"border-radius:0px;\">\n\n      <div class=\"modal-body\" style=\"padding: 80px\">\n        <div class=\"page-tagline\">\n          <h2 class=\"title\">Sign Into CapsuleCD</h2>\n          <div class=\"description\">\n            If you have already authorized either GitHub or Bitbucket on your CapsuleCD account, then you can click either button to sign in.\n          </div>\n        </div>\n\n        <div style=\"text-align: center; \">\n          <a class=\"button size-2 mr-40\" (click)=\"loginWith('github')\">\n            <span>Github</span>\n            <span *ngIf=\"loading.github\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n          </a>\n          <a class=\"button size-2\" (click)=\"loginWith('bitbucket')\">\n            <span>Bitbucket</span>\n            <span *ngIf=\"loading.bitbucket\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n          </a>\n\n        </div>\n\n\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
 /***/ 963:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"blocks-container\">\n\n  <div class=\"block standard scroll-to-block\" data-id=\"contact\">\n    <div class=\"container\">\n      <div class=\"row page-tagline\">\n        <div class=\"col-md-6 col-md-offset-3\">\n          <h2 class=\"title\">Publish</h2>\n          <div class=\"description\">\n          CapsuleCD makes it simple to publish new releases based off a Pull Request.\n            Just verify your project settings are correct, and select a SemVer segment to increment.\n          </div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-10 col-lg-offset-1\">\n          <alert *ngFor=\"let alert of alerts;let i = index\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert(i)\">\n            <div class=\"title\">{{ alert?.title}}</div>\n            {{ alert?.msg }}\n          </alert>\n        </div>\n      </div>\n\n      <div class=\"row\">\n\n        <div class=\"col-md-8 col-md-offset-2 wow fadeInRight\" data-wow-delay=\"0.3s\">\n\n\n          <div class=\"typography-article\">\n            <h4>Project Info\n              <span *ngIf=\"loading.pullRequest || loading.project\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n            </h4>\n            <form class=\"form-horizontal project-form mb-40\">\n              <fieldset>\n                <!-- Text input-->\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"projectName\">Project Name</label>\n                  <div class=\"col-md-9\">\n                    <input disabled id=\"projectName\" value=\"{{orgId + '/' + repoId}}\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"prNumber\">PR Number</label>\n                  <div class=\"col-md-9\">\n                    <input disabled id=\"prNumber\" value=\"{{prNumber}}\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"prTitle\">PR Title</label>\n                  <div class=\"col-md-9\">\n                    <input disabled id=\"prTitle\" value=\"{{pullRequest.title}}\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"projectType\">Project Type</label>\n                  <div class=\"col-md-9\">\n                    <input disabled id=\"projectType\" value=\"{{projectData.packageType}}\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"dockerImage\">Docker Image</label>\n                  <div class=\"col-md-9\">\n                    <input disabled id=\"dockerImage\" value=\"{{projectData.dockerImage}}\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n              </fieldset>\n            </form>\n\n          </div>\n\n\n          <div class=\"typography-article\">\n            <h4>Release Settings</h4>\n            <form class=\"form-horizontal project-form mb-40\" >\n              <fieldset>\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"versionIncr\">Version Increment</label>\n                  <div class=\"col-md-9\">\n\n                    <select [(ngModel)]=\"versionIncr\" id=\"versionIncr\" name=\"versionIncr\" class=\"form-control input-md\">\n                      <option value=\"major\">Major (1.x.x)</option>\n                      <option value=\"minor\">Minor (x.1.x)</option>\n                      <option value=\"patch\">Patch (x.x.1)</option>\n                    </select>\n\n                  </div>\n                </div>\n\n              </fieldset>\n            </form>\n          </div>\n\n          <div style=\"text-align: center;\">\n\n            <a class=\"button size-2\" (click)=\"createRelease()\">\n              <span>Create Release from Pull Request</span>\n              <span *ngIf=\"loading.createRelease || loading.project\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n            </a>\n\n          </div>\n\n\n        </div>\n\n\n\n      </div>\n    </div>\n  </div>\n\n  <capsule-footer></capsule-footer>\n\n\n</div>"
+module.exports = "<div class=\"blocks-container\">\n\n  <div class=\"block scroll-to-block\" data-id=\"benefits\">\n    <div class=\"container\">\n      <div class=\"row page-tagline\" style=\"margin-bottom: 0px;\">\n        <div class=\"col-md-6 col-md-offset-3 wow flipInX\" data-wow-delay=\"0.3s\">\n          <h2 class=\"title\">Dashboard</h2>\n          <div class=\"description\">CapsuleCD makes publishing new version of your library simple.\n\n            Select a project, choose a PR to base your new version off of and you're all done.</div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-10 col-lg-offset-1\">\n          <alert *ngFor=\"let alert of alerts;let i = index\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert(i)\">\n            <div class=\"title\">{{ alert?.title}}</div>\n            {{ alert?.msg }}\n          </alert>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-md-3\" style=\"margin-bottom: 50px;\">\n\n          <div class=\"widget-entry\">\n            <h3 class=\"widget-title\">All Projects <span *ngIf=\"loading.projects\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n            </h3>\n            <div class=\"categories-wrapper\">\n              <span *ngFor=\"let project of projects\" class=\"entry\">\n                <a (click)=\"showProject(project)\" >\n                  <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>{{project.RepoId}}\n                  <span *ngIf=\"loading.pullrequests[project.RepoId]\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n                </a>\n                <span class=\"number\" [routerLink]=\"['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/edit' ]\"><span class=\"glyphicon glyphicon-cog\" aria-hidden=\"true\"></span></span>\n              </span>\n\n            </div>\n          </div>\n        </div>\n\n\n        <div class=\"col-md-9\">\n          <div class=\"typography-article\">\n            <h4>{{selectedProject.Id}} Pull Requests\n              <span *ngIf=\"loading.pullrequests[selectedProject.RepoId]\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n            </h4>\n          </div>\n          <div class=\"clear\"></div>\n\n          <div class=\"row\" *ngFor=\"let pullRequest of projectPullRequests\">\n\n            <div class=\"pull-request-panel panel-default panel-horizontal typography-article\">\n              <div class=\"panel-heading text-center\" style=\"width:10em;\">\n                <h3 class=\"pr-number\"><a [href]=\"pullRequest.html_url\">#{{pullRequest.number}}</a></h3>\n                <span class=\"pr-date\">{{pullRequest.updated_at | amTimeAgo}}</span>\n                <hr />\n                <div class=\"pr-user\"><a [href]=\"pullRequest.user.html_url\">@{{pullRequest.user.login}}</a></div>\n              </div>\n\n              <div class=\"panel-body\">\n\n                <!--div class=\"col-xs-2 col-md-3 text-center age\">\n                    <img src=\"https://placeholdit.imgix.net/~text?txtsize=40&txt=John%20Doe&w=200&h=200\" class=\"img-circle img-responsive\" alt=\"\" />\n                </div-->\n                <div class=\"col-xs-12 col-md-12 section-box\">\n                  <h4>{{pullRequest.title}}</h4>\n                  <pre class=\"pr-body\">{{pullRequest.body || '...'}}</pre>\n\n                  <a *ngIf=\"selectedProject.Pending[pullRequest.number]\" class=\"button black size-3 pull-right mt-15\" [routerLink]=\"['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/pullrequests/' + pullRequest.number + '/logs' ]\"><span>View Logs</span></a>\n                  <a class=\"button size-3 pull-right mt-15 mr-10\" [routerLink]=\"['/project/' + selectedProject.ServiceType + '/' + selectedProject.OrgId + '/' + selectedProject.RepoId + '/pullrequests/' + pullRequest.number ]\"><span>Create Release</span></a>\n\n                </div>\n\n              </div>\n            </div>\n\n          </div>\n\n\n\n          <div class=\"row\" *ngIf=\"projectPullRequests.length == 0\">\n\n            <div class=\"pull-request-panel panel-default panel-horizontal typography-article\">\n              <div class=\"panel-empty text-center\" style=\"width:10em;\">\n                <h3 class=\"pr-number\"><div>No Pull Requests Found</div></h3>\n                <p>Try selecting a different project</p>\n              </div>\n\n            </div>\n\n          </div>\n\n\n\n        </div>\n\n\n\n\n      </div>\n    </div>\n  </div>\n\n\n  <capsule-footer></capsule-footer>\n\n\n</div>"
 
 /***/ }),
 
 /***/ 964:
 /***/ (function(module, exports) {
 
+module.exports = "<!-- FOOTER -->\n<footer>\n\n  <div class=\"footer-bottom\">\n    <div class=\"footer-linck\">\n      <a href=\"http://www.capsulecd.com\">Home</a>\n      <a href=\"#\">Privacy Policy</a>\n      <a href=\"http://blog.thesparktree.com\">Blog</a>\n    </div>\n    <div class=\"media-icon\">\n      <a href=\"http://ca.linkedin.com/pub/jason-kulatunga/11/382/337\"><img src=\"assets/img/social-icons/linkedin.png\" alt=\"\"/></a>\n      <a href=\"#\"><img src=\"assets/img/social-icons/googleplus.png\" alt=\"\"/></a>\n      <a href=\"http://twitter.com/analogj\"><img src=\"assets/img/social-icons/twitter.png\" alt=\"\"/></a>\n    </div>\n    <div class=\"copy\">\n      <span>© 2016 All rights reserved. CapsuleCD</span>\n    </div>\n  </div>\n  <div class=\"back-to-top\"><i class=\"fa fa-chevron-up\"></i></div>\n</footer>"
+
+/***/ }),
+
+/***/ 965:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"blocks-container\">\n\n  <div class=\"block standard scroll-to-block\" data-id=\"contact\">\n    <div class=\"container\">\n      <div class=\"row page-tagline\">\n        <div class=\"col-md-6 col-md-offset-3\">\n          <h2 class=\"title\">Create Project</h2>\n          <div class=\"description\">\n            Choose an organization that you are a member of, then choose a repo to add to CapsuleCD.\n\n            We'll watch it and keep track of all new PR's opened on your repo.\n          </div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-10 col-lg-offset-1\">\n          <alert *ngFor=\"let alert of alerts;let i = index\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert(i)\">\n            <div class=\"title\">{{ alert?.title}}</div>\n            {{ alert?.msg }}\n          </alert>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-offset-2 col-lg-8\">\n          <div class=\"blog-post style-3\">\n            <div class=\"row\">\n              <div class=\"col-md-12\" *ngIf=\"orgs.length >=1\">\n                <div class=\"data\">\n                  <div class=\"date\"><span>{{orgRepos.length}}</span> repos</div>\n                  <div class=\"text\">\n                    <div class=\"author-entry\">\n                      <a class=\"author-thumbnail\"><img alt=\"\" [src]=\"orgs[selectedOrgIndex].avatar_url\" class=\"img-circle\"></a>\n                      <a class=\"title ml-20 mt-10\">{{orgs[selectedOrgIndex].login}}</a>\n                      <div class=\"clear\"></div>\n                    </div>\n\n                    <div class=\"description\">{{ orgs[selectedOrgIndex].description || orgs[selectedOrgIndex].bio }}</div>\n\n                  </div>\n                  <div class=\"clear\"></div>\n                </div>\n                <div class=\"paginator\" *ngIf=\"orgs.length > 1\">\n                  <div>\n                    <a (click)=\"selectPrevOrg(selectedOrgIndex-1)\" class=\"arrow-button\"><span aria-hidden=\"true\" class=\"glyphicon glyphicon-chevron-left\"></span> Prev Account</a>\n                    <a (click)=\"selectNextOrg(selectedOrgIndex+1)\" class=\"arrow-button\">Next Account <span aria-hidden=\"true\" class=\"glyphicon glyphicon-chevron-right\"></span></a>\n                  </div>\n                  <div class=\"clear\"></div>\n                </div>\n              </div>\n\n\n            </div>\n          </div>\n\n\n        </div>\n      </div>\n\n\n      <div class=\"row\" *ngIf=\"orgRepos.length > 0\">\n        <div class=\"col-md-8 col-md-offset-2\">\n          <div class=\"typography-article\">\n            <div class=\"table-responsive repo-table\">\n              <table class=\"table\" infinite-scroll  (scrolled)=\"fetchSelectedOrgReposNextPage()\" [infiniteScrollDisabled]=\"loading.fetchOrgRepos ||  orgReposAll\">\n                <tr>\n                  <th>Name</th>\n                  <th>Updated At</th>\n                  <th>Action</th>\n                </tr>\n                <tr *ngFor=\"let repo of orgRepos\">\n                  <td>{{repo.name}} </td>\n                  <td>{{repo.updated_at| amTimeAgo}}</td>\n                  <td>\n                    <a class=\"button size-3 type-1\" (click)=\"createProject(orgs[selectedOrgIndex].login, repo.name)\"><span>Watch Project</span></a>\n                  </td>\n                </tr>\n\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>\n\n\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <capsule-footer></capsule-footer>\n\n\n\n</div>\n\n"
+
+/***/ }),
+
+/***/ 966:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"blocks-container\">\n\n  <div class=\"block standard scroll-to-block\" data-id=\"contact\">\n    <div class=\"container\">\n      <div class=\"row page-tagline\">\n        <div class=\"col-md-6 col-md-offset-3\">\n          <h2 class=\"title\">Publish Logs</h2>\n          <div class=\"description\">\n            These logs help you track the status of your release, and provides the information necessary to determine why\n              your package was not published by Capsule.\n          </div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-10 col-lg-offset-1\">\n          <alert *ngFor=\"let alert of alerts;let i = index\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert(i)\">\n            <div class=\"title\">{{ alert?.title}}</div>\n            {{ alert?.msg }}\n          </alert>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-md-offset-1 col-md-3\">\n          <div class=\"typography-article\">\n              <h3 class=\"widget-title\">Info</h3>\n              <ul class=\"list-style-3\">\n                  <li><span class=\"text-strong\">Repository:</span> {{orgId + '/' + repoId}}</li>\n                  <li><span class=\"text-strong\">Pull Request:</span> {{prNumber}}</li>\n                  <li><span class=\"text-strong\">Status:</span> {{containerState.Status}} <span *ngIf=\"!containerState.Running\">({{containerState.ExitCode}})</span></li>\n                  <li><span class=\"text-strong\">Started:</span> {{containerState.StartedAt}}</li>\n                  <li *ngIf=\"!containerState.Running\"><span class=\"text-strong\">Duration:</span> {{containerState.FinishedAt}} minutes</li>\n              </ul>\n          </div>\n        </div>\n        <!--<div class=\"col-md-6\">-->\n          <!--<div class=\"typography-article\">-->\n            <!--<h3 class=\"widget-title\">Commits</h3>-->\n            <!--<ul class=\"list-style-3\">-->\n              <!--<li>MP3, Ogg Vorbis or AAC can be used</li>-->\n              <!--<li>48 kHz sample rate</li>-->\n              <!--<li>16 bits per sample</li>-->\n              <!--<li>2 channels for stereo audio</li>-->\n              <!--<li>Audio bitrate 128-320Kbps</li>-->\n            <!--</ul>-->\n          <!--</div>-->\n        <!--</div>-->\n\n      </div>\n\n\n      <div class=\"row\">\n        <div class=\"col-lg-offset-1 col-lg-10\">\n\n            <!--http://codepen.io/simoami/pen/zstvo-->\n            <!--http://codepen.io/jamesduncombe/pen/QNMapK-->\n            <!--http://codepen.io/sthupukari/pen/VYjGpL-->\n            <!--http://codepen.io/mahdi/pen/rOqpBJ-->\n          <div class=\"terminal-window\">\n              <div class=\"term-header\">\n                  <div class=\"term-button green\"></div>\n                  <div class=\"term-button yellow\"></div>\n                  <div class=\"term-button red\"></div>\n                  <span *ngIf=\"containerState.Running\" class=\"glyphicon glyphicon-repeat mt-5 fast-right-spinner pull-right\"></span>\n\n              </div>\n              <section class=\"terminal\">\n                  <div class=\"history\">\n                    <div *ngFor=\"let log of logs\">\n                        <span [ngClass]=\"log.stream\">{{log.line}}</span>\n                    </div>\n                  </div>\n                  $&nbsp;<span class=\"prompt\"></span>\n                  <span class=\"typed-cursor\"></span>\n\n              </section>\n          </div>\n        </div>\n      </div>\n\n\n    </div>\n  </div>\n\n  <capsule-footer></capsule-footer>\n\n\n</div>"
+
+/***/ }),
+
+/***/ 967:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"blocks-container\">\n\n  <div class=\"block standard scroll-to-block\" data-id=\"contact\">\n    <div class=\"container\">\n      <div class=\"row page-tagline\">\n        <div class=\"col-md-6 col-md-offset-3\">\n          <h2 class=\"title\">Publish</h2>\n          <div class=\"description\">\n          CapsuleCD makes it simple to publish new releases based off a Pull Request.\n            Just verify your project settings are correct, and select a SemVer segment to increment.\n          </div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-10 col-lg-offset-1\">\n          <alert *ngFor=\"let alert of alerts;let i = index\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert(i)\">\n            <div class=\"title\">{{ alert?.title}}</div>\n            {{ alert?.msg }}\n          </alert>\n        </div>\n      </div>\n\n      <div class=\"row\">\n\n        <div class=\"col-md-8 col-md-offset-2 wow fadeInRight\" data-wow-delay=\"0.3s\">\n\n\n          <div class=\"typography-article\">\n            <h4>Project Info\n              <span *ngIf=\"loading.pullRequest || loading.project\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n            </h4>\n            <form class=\"form-horizontal project-form mb-40\">\n              <fieldset>\n                <!-- Text input-->\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"projectName\">Project Name</label>\n                  <div class=\"col-md-9\">\n                    <input disabled id=\"projectName\" value=\"{{orgId + '/' + repoId}}\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"prNumber\">PR Number</label>\n                  <div class=\"col-md-9\">\n                    <input disabled id=\"prNumber\" value=\"{{prNumber}}\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"prTitle\">PR Title</label>\n                  <div class=\"col-md-9\">\n                    <input disabled id=\"prTitle\" value=\"{{pullRequest.title}}\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"projectType\">Project Type</label>\n                  <div class=\"col-md-9\">\n                    <input disabled id=\"projectType\" value=\"{{projectData.packageType}}\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"dockerImage\">Docker Image</label>\n                  <div class=\"col-md-9\">\n                    <input disabled id=\"dockerImage\" value=\"{{projectData.dockerImage}}\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n              </fieldset>\n            </form>\n\n          </div>\n\n\n          <div class=\"typography-article\">\n            <h4>Release Settings</h4>\n            <form class=\"form-horizontal project-form mb-40\" >\n              <fieldset>\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"versionIncr\">Version Increment</label>\n                  <div class=\"col-md-9\">\n\n                    <select [(ngModel)]=\"versionIncr\" id=\"versionIncr\" name=\"versionIncr\" class=\"form-control input-md\">\n                      <option value=\"major\">Major (1.x.x)</option>\n                      <option value=\"minor\">Minor (x.1.x)</option>\n                      <option value=\"patch\">Patch (x.x.1)</option>\n                    </select>\n\n                  </div>\n                </div>\n\n              </fieldset>\n            </form>\n          </div>\n\n          <div style=\"text-align: center;\">\n\n            <a class=\"button size-2\" (click)=\"createRelease()\">\n              <span>Create Release from Pull Request</span>\n              <span *ngIf=\"loading.createRelease || loading.project\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n            </a>\n\n          </div>\n\n\n        </div>\n\n\n\n      </div>\n    </div>\n  </div>\n\n  <capsule-footer></capsule-footer>\n\n\n</div>"
+
+/***/ }),
+
+/***/ 968:
+/***/ (function(module, exports) {
+
 module.exports = "<div class=\"blocks-container\">\n\n  <div class=\"block standard scroll-to-block\" data-id=\"contact\">\n    <div class=\"container\">\n      <div class=\"row page-tagline\">\n        <div class=\"col-md-6 col-md-offset-3\">\n          <h2 class=\"title\">Edit {{orgId + '/' + repoId}}</h2>\n          <div class=\"description\">Update your project settings here, like library language, Docker container and secrets.\n          These settings will be used whenever you publish a new version of your library</div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-10 col-lg-offset-1\">\n          <alert *ngFor=\"let alert of alerts;let i = index\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert(i)\">\n            <div class=\"title\">{{ alert?.title}}</div>\n            {{ alert?.msg }}\n          </alert>\n        </div>\n      </div>\n\n\n      <div class=\"row\">\n        <div class=\"col-md-8 col-md-offset-2 wow fadeInRight\" data-wow-delay=\"0.3s\">\n          <div class=\"typography-article\">\n            <h4>Project Settings\n              <span *ngIf=\"loading.project\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n            </h4>\n            <form class=\"form-horizontal project-form mb-40\">\n              <fieldset>\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"packageType\">Package Type</label>\n                  <div class=\"col-md-9\">\n\n                    <select [(ngModel)]=\"projectData.packageType\" (ngModelChange)=\"packageTypeChanged($event)\" id=\"packageType\" name=\"packageType\" class=\"form-control input-md\">\n                      <option *ngFor=\"let key of defaultSettingsKeys\" value=\"{{key}}\">{{defaultSettings[key].display}}</option>\n                    </select>\n                    <p class=\"help-block small\">Which type of package are you deploying using CapsuleCD?</p>\n\n                  </div>\n                </div>\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"versionIncr\">Version Increment</label>\n                  <div class=\"col-md-9\">\n\n                    <select [(ngModel)]=\"projectData.versionIncr\" id=\"versionIncr\" name=\"versionIncr\" class=\"form-control input-md\">\n                      <option value=\"major\">Major (1.x.x)</option>\n                      <option value=\"minor\">Minor (x.1.x)</option>\n                      <option value=\"patch\">Patch (x.x.1)</option>\n                    </select>\n                    <p class=\"help-block small\">Select which segment of the SemVer version you would like to bump with each release. This can be overriden when creating a new release</p>\n\n                  </div>\n                </div>\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"dockerImage\">Docker Image\n                  </label>\n                  <div class=\"col-md-9\">\n                    <div class=\"input-group typeahead-group\">\n\n                      <input [(ngModel)]=\"projectData.dockerImage\"\n                             [typeahead]=\"dockerImagesDatasource\"\n                             (typeaheadLoading)=\"dockerImagesLoading($event)\"\n                             (typeaheadNoResults)=\"dockerImagesNoResultsHandler($event)\"\n                             [typeaheadOptionsLimit]=\"7\"\n                             [typeaheadOptionField]=\"'repo_name'\"\n                             name=\"dockerImage\"\n                             id=\"dockerImage\"\n                             placeholder=\"Docker Image (eg. 'AnalogJ/capsulecd')\"\n                             type=\"text\"\n                             class=\"form-control input-md\">\n                      <span *ngIf=\"loading.queryDockerImages\" class=\"input-group-addon\">\n                        <span class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n                      </span>\n                    </div>\n                    <div *ngIf=\"dockerImagesNoResults\">\n                      <i class=\"glyphicon glyphicon-remove\"></i> No Results Found\n                    </div>\n                    <p class=\"help-block small\">Select the docker image you would like to use when deploying your package. The default image should work in most cases</p>\n\n                  </div>\n                </div>\n\n                <div class=\"col-md-9 col-md-offset-3\">\n                  <a class=\"button type-1 size-3\" (click)=\"saveSettings()\">\n                    <span>Save Settings</span>\n                    <span *ngIf=\"loading.saveSettings\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n                  </a>\n                </div>\n              </fieldset>\n            </form>\n\n          </div>\n\n\n          <div class=\"typography-article\">\n            <h4>Project Secrets\n              <span *ngIf=\"loading.project\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n            </h4>\n            <p>Add environment variables to the project build. You can add sensitive data (e.g. NPM, RubyGems API keys) here, rather than placing them in the repository.\n            </p>\n            <p *ngIf=\"projectData.packageType && defaultSettings[projectData.packageType].recommendedSecrets.length\">\n              {{defaultSettings[projectData.packageType].display}} packages should have the following secrets configured:\n              <br/>\n              <span class=\"text-strong\">\n                {{defaultSettings[projectData.packageType].recommendedSecrets.join(', ')}}\n              </span>\n            </p>\n\n\n            <form class=\"form-horizontal project-form mb-40\" >\n              <fieldset>\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"secretName\">Secret Name</label>\n                  <div class=\"col-md-9\">\n                    <input [(ngModel)]=\"secretName\"  id=\"secretName\" name=\"textinput\" type=\"text\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n\n                <div class=\"form-group\">\n                  <label class=\"col-md-3 control-label\" for=\"secretValue\">Secret Value</label>\n                  <div class=\"col-md-9\">\n                    <input [(ngModel)]=\"secretValue\" id=\"secretValue\" name=\"textinput\" type=\"password\" class=\"form-control input-md\" required=\"\">\n                  </div>\n                </div>\n\n                <div class=\"col-md-9 col-md-offset-3\">\n                  <a class=\"button type-1 size-3\" (click)=\"addSecret()\">\n                    <span>Add Secret</span>\n                    <span *ngIf=\"loading.addSecret\" class=\"glyphicon glyphicon-repeat ml-10 fast-right-spinner\"></span>\n                  </a>\n                </div>\n\n              </fieldset>\n            </form>\n\n          </div>\n\n\n\n\n        </div>\n\n\n\n      </div>\n      <div class=\"row\">\n        <div class=\"col-md-8 col-md-offset-2\">\n          <div class=\"typography-article\">\n            <div class=\"table-responsive\">\n              <table class=\"table\">\n                <tr>\n                  <th>Secret Name</th>\n                  <th>Secret Value</th>\n                  <th></th>\n                </tr>\n                <tr *ngFor=\"let secretKey of projectSecretsKeys\">\n                  <td>{{secretKey}}</td>\n                  <td>*****{{projectSecrets[secretKey].last4}}</td>\n                  <td><span aria-hidden=\"true\" class=\"glyphicon glyphicon-trash\"></span></td>\n                </tr>\n\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <capsule-footer></capsule-footer>\n\n\n\n</div>"
 
 /***/ })
 
-},[1025]);
+},[1029]);
 //# sourceMappingURL=main.bundle.map
