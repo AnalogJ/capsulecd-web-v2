@@ -8,7 +8,7 @@ export class AppSettings {
     public static get DOCKER_IMAGES(): any {
         return {
             'default': {
-                display: 'Custom',
+                display: 'Generic',
                 image: 'analogj/capsulecd',
                 recommendedSecrets:[]
             },
