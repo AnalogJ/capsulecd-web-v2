@@ -120,10 +120,10 @@ export class ApiService {
         .catch(this.handleError);
   }
 
-  getPublishLogs(orgId:string, repoId: string, prNumber: number, since?: number): Observable<any> {
+  getPublishLogs(orgId:string, repoId: string, prNumber: number, nextToken?: string): Observable<any> {
     let params: URLSearchParams = new URLSearchParams();
-    if(since){
-      params.set('since', since.toString());
+    if(nextToken){
+      params.set('NextToken', nextToken);
     }
     return this.authHttp.get(`${AppSettings.API_ENDPOINT}/logs/${this.serviceType()}/${orgId}/${repoId}/${prNumber}`,{ search: params })
         .map(this.extractData)
