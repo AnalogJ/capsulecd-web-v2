@@ -28,9 +28,7 @@
               <ul class="list-style-3">
                   <li><span class="text-strong">Repository:</span> {{orgId + '/' + repoId}}</li>
                   <li><span class="text-strong">Pull Request:</span> {{prNumber}}</li>
-                  <li><span class="text-strong">Status:</span> {{containerState.Status}} <span *ngIf="!containerState.Running">({{containerState.ExitCode}})</span></li>
-                  <li><span class="text-strong">Started:</span> {{containerState.StartedAt}}</li>
-                  <li *ngIf="!containerState.Running"><span class="text-strong">Duration:</span> {{containerState.FinishedAt}} minutes</li>
+                  <li><span class="text-strong">Status:</span> {{containerState}}</li>
               </ul>
           </div>
         </div>
@@ -62,7 +60,6 @@
                   <div class="term-button green"></div>
                   <div class="term-button yellow"></div>
                   <div class="term-button red"></div>
-                  <span *ngIf="containerState.Running" class="glyphicon glyphicon-repeat mt-5 fast-right-spinner pull-right"></span>
 
               </div>
               <section class="terminal">

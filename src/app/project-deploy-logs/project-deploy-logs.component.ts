@@ -4,7 +4,6 @@ import { ApiService } from '../services/api.service';
 import {Alert} from '../models/alert'
 import {TimerObservable} from "rxjs/observable/TimerObservable";
 import {Subscription} from "rxjs";
-import {ContainerState} from '../models/container-state'
 @Component({
   selector: 'app-project-deploy-logs',
   templateUrl: './project-deploy-logs.component.html',
@@ -24,10 +23,10 @@ export class ProjectDeployLogsComponent implements OnInit {
     project: true,
     pullRequest: true
   };
-  firstRequest: boolean = true;
+  nextToken: string = "";
 
   logSubscription: Subscription;
-  containerState: ContainerState = new ContainerState();
+  containerState: string = ""
 
 
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
@@ -39,10 +38,16 @@ export class ProjectDeployLogsComponent implements OnInit {
 
     let timer = TimerObservable.create(0, 3000); //start at 0ms and re-run every 3 seconds (3000ms)
     this.logSubscription = timer.subscribe(t => {
-      this.apiService.getPublishLogs(this.orgId, this.repoId, this.prNumber, (this.firstRequest? 0 : Math.round(Date.now()/1000))) //we need to send timestamp in milliseconds, not seconds.
+      this.apiService.getPublishLogs(this.orgId, this.repoId, this.prNumber, (this.nextToken == "" ? null : this.nextToken)) //we need to send timestamp in milliseconds, not seconds.
           .subscribe(
               data => {
-                  this.containerState = data.State;
+                this.containerState = data.State;
+
+                if(this.containerState == "PENDING"){
+                  return
+                }
+
+                //container is running or stopped
                 if(!data.Lines || data.Lines.length == 0){
                     this.logSubscription.unsubscribe();
                 }
@@ -56,7 +61,6 @@ export class ProjectDeployLogsComponent implements OnInit {
               },
               () => {
                   this.loading.logs = false;
-                  this.firstRequest = false;
               }
 
           );
