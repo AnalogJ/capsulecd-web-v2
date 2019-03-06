@@ -44,36 +44,36 @@ jobs:
     - attach_workspace:
         # Must be absolute path or relative path from working_directory
         at: /tmp/capsulecd-web
-      - deploy:
-          name: "Deploy to GH-Pages"
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ng build --output-path ../dist --base-href "/" --sourcemap --prod
-              echo "www.capsulecd.com" > ../dist/CNAME
-            else
-              ng build --output-path ../dist --base-href "/" --dev
-            fi
-            cp ../dist/angular.html ../dist/404.html
+    - deploy:
+        name: "Deploy to GH-Pages"
+        command: |
+          if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            ng build --output-path ../dist --base-href "/" --sourcemap --prod
+            echo "www.capsulecd.com" > ../dist/CNAME
+          else
+            ng build --output-path ../dist --base-href "/" --dev
+          fi
+          cp ../dist/angular.html ../dist/404.html
 
-            mkdir -p ~/.ssh
-            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+          mkdir -p ~/.ssh
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
-            git config --global user.email circleci@circleci
-            git config --global user.name CircleCI
+          git config --global user.email circleci@circleci
+          git config --global user.name CircleCI
 
-            cd ../dist
-            git init
-            git checkout -b gh-pages
-            git add -A
-            git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+          cd ../dist
+          git init
+          git checkout -b gh-pages
+          git add -A
+          git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              git remote add origin git@github.com:AnalogJ/capsulecd-web.git
-            else
-              git remote add origin git@github.com:AnalogJ/capsulecd-web-v2.git
-            fi
+          if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            git remote add origin git@github.com:AnalogJ/capsulecd-web.git
+          else
+            git remote add origin git@github.com:AnalogJ/capsulecd-web-v2.git
+          fi
 
-            git push --force origin gh-pages:gh-pages
+          git push --force origin gh-pages:gh-pages
 workflows:
   version: 2
   build_and_test:
